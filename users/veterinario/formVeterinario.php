@@ -25,17 +25,55 @@
 		<h3> Dados Pessoias </h3>
 
 		<label for="name">CPF</label>
-		<input type="number" name="CPF_veterinario" id="CPF_veterinario" placeholder="000.000.000-00" required><br>
+		<input type="text" name="CPF_veterinario" id="CPF_veterinario" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)">
+		<script>
+			function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+}
+		</script>
 
 		<label for="name">Nome</label>
 		<input type="text" name="nome_veterinario" id="nome_veterinario" placeholder="Digite seu nome" required><br>
 
 		<label for="name">CRMV</label>
-		<input type="text" name="CRMV" id="CRMV" placeholder="Digite seu nome" required><br>
+		<input type="text" name="CRMV" id="CRMV" maxlength="6" OnKeyPress="formatar('#-####', this)">
+		<script>
+
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+}
+
+		</script>
 
 
 		<label for="name">Nº de Telefone</label>
-		<input type="number" name="fone_veterinario" id="fone_veterinario" placeholder="(99) 9 9999-9999" required><br>
+		<input type="text" name="fone_veterinario" id="fone_veterinario" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
+
+		<script>
+
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+}
+
+		</script>
 
 		<label for="name">E-mail</label>
 		<input type="text" name="email_veterinario" id="email_veterinario" placeholder="nickname@provedor.com" required><br>

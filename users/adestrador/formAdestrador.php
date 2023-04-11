@@ -25,13 +25,35 @@
 		<h3> Dados Pessoias </h3>
 
 		<label for="name">CPF</label>
-		<input type="number" name="CPF_adestrador" id="CPF_adestrador" placeholder="000.000.000-00" required><br>
+		<input type="text" name="CPF_adestrador" id="CPF_adestrador" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)"><br>
+		<script>
+	function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+	}
+	</script>
 
 		<label for="name">Nome</label>
 		<input type="text" name="nome_adestrador" id="nome_adestrador" placeholder="Digite seu nome" required><br>
 
 		<label for="name">Nº de Telefone</label>
-		<input type="number" name="fone_adestrador" id="fone_adestrador" placeholder="(99) 9 9999-9999" required><br>
+		<input type="text" name="fone_adestrador" id="fone_adestrador" maxlength="15" OnKeyPress="formatar('## #####-####', this)"><br>
+		<script>
+			function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+}
+		</script>
 
 		<label for="name">E-mail</label>
 		<input type="text" name="email_adestrador" id="email_adestrador" placeholder="nickname@provedor.com" required><br>
