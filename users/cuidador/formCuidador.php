@@ -16,7 +16,7 @@
 	<h2> Cadastro Cuidador </h2>
 	<form action="./cadastrarCuidador.php" method="POST">
 
-		<h3> Dados Pessoias </h3>
+		<h3> Dados Pessoiasmm </h3>
 
 		<label for="name">CPF</label>
 		<input type="number" name="CPF_cuidador" id="CPF_cuidador" class="cpf-mask" required><br>
