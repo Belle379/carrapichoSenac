@@ -1,0 +1,8 @@
+{
+    "name": "card",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "07778367181",
+    "contributors": [],
+    "dependencies": {}
+}
