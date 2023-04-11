@@ -13,15 +13,14 @@ include_once "../conexao.php"; //Incluir a conexao com BD
 // o $algumacoisa é criando uma variavel  e o $_POST["algumacoisa"] é puxando do dado inserido do formulario
 $CPF_veterinario = $_POST["CPF_veterinario"];
 $nome_veterinario = $_POST["nome_veterinario"];
-$CRMV = $_POST["CRMV"];
 $fone_veterinario = $_POST["fone_veterinario"];
 $email_veterinario = $_POST["email_veterinario"];
 $senha_veterinario = $_POST["senha_veterinario"];
-$plantao = $_POST["plantao"];
+$CRMV = $_POST["CRMV"];
 //$query_algumacoisa é uma variavel para inserir o camando do banco.
 //dbCuidador = dados basicos Cuidador 
-$query_dbveterinario = "INSERT INTO tb_veterinario ( CPF_veterinario, nome_veterinario, CRMV, fone_veterinario,email_veterinario,senha_veterinario, plantao) 
-VALUES ('$CPF_veterinario', '$nome_veterinario', '$CRMV', x'$fone_veterinario','$email_veterinario','$senha_veterinario', '$plantao')";
+$query_dbveterinario = "INSERT INTO tb_veterinario ( CPF_veterinario, nome_veterinario, fone_veterinario,email_veterinario,senha_veterinario, CRMV) 
+VALUES ('$CPF_veterinario', '$nome_veterinario', '$fone_veterinario','$email_veterinario','$senha_veterinario', '$CRMV')";
 //$result_algumacoisa é outra variavel para conectar direcionar qual é o banco e qual é a tabela. 
 $result_dbveterinario = mysqli_query($conexao, $query_dbveterinario);
 
@@ -33,13 +32,14 @@ if ($result_dbveterinario > 0) {
     echo "Deu erro:  <br>" . mysqli_error($conexao);//caso contrario irá informar o erro. 
 }
 
+/.................................................Tabela Serviço Cuidador.....................................................//
 $consulta=  (isset($_POST['consulta']) && !empty($_POST['consulta'])) ? 1 : 0;
 $vacina= (isset($_POST['vacina']) && !empty($_POST['vacina'])) ? 1 : 0;
 $exame= (isset($_POST['exame']) && !empty($_POST['exame'])) ? 1 : 0;
 $emergencia= (isset($_POST['emergencia']) && !empty($_POST['emergencia'])) ? 1 : 0;
-
-$query_servicoVet = "INSERT INTO tb_servicovet (consulta,vacina,exame,emergencia) 
-VALUES ('$consulta', '$vacina', '$exame', '$emergencia')";
+$plantao= (isset($_POST['plantao']) && !empty($_POST['plantao'])) ? 1 : 0;
+$query_servicoVet = "INSERT INTO tb_servicovet (consulta,vacina,exame,emergencia,plantao) 
+VALUES ('$consulta', '$vacina', '$exame', '$emergencia','$plantao')";
 
 $result_servicoVet = mysqli_query($conexao, $query_servicoVet);
 

@@ -33,41 +33,6 @@ if ($result_dbAdestrador > 0) {
 }
 
 
-
-//.................................................Tabela Especie...........................................................//
-
-// esse é um campo de check box e esse codigo é para dizer que se o campo for marcado 
-//armazene o valor 1 no banco se não armazene o valor 0 
-$cao = (isset($_POST['cao']) && !empty($_POST['cao'])) ? 1 : 0;
-$gato = (isset($_POST['gato']) && !empty($_POST['gato'])) ? 1 : 0;
-$outro = $_POST["outro"];
-
-// O resto é a mesma logica do que foi comentado a cima. 
-
-$query_especie = "INSERT INTO tb_especie (cao, gato, outro) 
-VALUES ('$cao','$gato','$outro')";
-$result_especie = mysqli_query($conexao, $query_especie);
-
-if ($result_especie > 0) {
-    echo "<script>alert('Seus dados foram salvos !')</script>";
-} else {
-    echo "Deu erro:  <br>" . mysqli_error($conexao);
-}
-//.................................................Tabela Porte.............................................................//
-$pequeno = (isset($_POST['pequeno']) && !empty($_POST['pequeno'])) ? 1 : 0 ;
-$medio = (isset($_POST['medio']) && !empty($_POST['medio'])) ? 1 : 0 ;
-$grande = (isset($_POST['grande']) && !empty($_POST['grande'])) ? 1 : 0 ;
-
-$query_porte = "INSERT INTO tb_porte (pequeno, medio,grande) 
-VALUES ('$pequeno','$medio','$grande')";
-$result_porte = mysqli_query($conexao, $query_porte);
-
-if ($result_porte > 0) {
-    echo "<script>alert('Seus dados foram salvos !')</script>";
-} else {
-    echo "Deu erro:  <br>" . mysqli_error($conexao);
-}
-
 //.................................................Tabela Serviço Cuidador.....................................................//
 
 $nomeCurso = $_POST['nomeCurso'];
