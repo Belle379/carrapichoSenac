@@ -20,22 +20,45 @@
 		<h3> Dados Pessoias </h3>
 
 		<label for="name">CPF</label>
-		<input type="number" name="CPF_dono" id="CPF_dono" placeholder="000.000.000-00" required><br>
+		<input type="text" name="CPF_dono" id="CPF_dono" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" placeholder="000.000.000-00"  required><br>
+		<script>
+		function formatar(mascara, documento){
+  			var i = documento.value.length;
+ 		 	var saida = mascara.substring(0,1);
+  			var texto = mascara.substring(i)
+
+  		if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+ 			 }			
+		}
+		</script>
+
 
 		<label for="name">Nome</label>
 		<input type="text" name="nome_dono" id="nome_dono" placeholder="Digite seu nome" required><br>
 
 		<label for="name">Nº de Telefone</label>
-		<input type="number" name="fone_dono" id="fone_dono" placeholder="(99) 9 9999-9999" required><br>
+		<input type="text" name="fone_dono" id="fone_dono" maxlength="15" OnKeyPress="formatar('## #####-####', this)" placeholder="99 99999-9999" required><br>
+		<script>
+		function formatar(mascara, documento){
+ 			var i = documento.value.length;
+  			var saida = mascara.substring(0,1);
+  			var texto = mascara.substring(i)
+
+  			if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+ 			 }
+			}
+		</script>
 
 		<label for="name">E-mail</label>
-		<input type="text" name="email_dono" id="email_dono" placeholder="nickname@provedor.com" required><br>
+		<input type="email" name="email_dono" id="email_dono" placeholder="nickname@provedor.com" required><br>
 
 		<label for="name">Senha</label>
-		<input type="text" name="senha_dono" id="senha_dono" placeholder="Crie uma senha" required><br>
+		<input type="password" name="senha_dono" id="senha_dono" placeholder="Crie uma senha" required><br>
 
 		<label for="name">Confirmar Senha</label>
-		<input type="text" name="Csenha_dono" id="Csenha_dono" placeholder="Confirme a senha" required><br>
+		<input type="password" name="Csenha_dono" id="Csenha_dono" placeholder="Confirme a senha" required><br>
 		<input type="submit" value="Próximo" name="Cadastrar">
       </form>
 

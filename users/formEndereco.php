@@ -13,7 +13,7 @@
 
 <div class="tamanho_form">
 <div class="single-input">
-    <input type="text" id="cep" name="cep" class="input" maxlength="9" autofocus  placeholder="00.000.000" required><br>
+    <input type="text" id="cep" name="cep" class="input" maxlength="9" autofocus OnBlur="pesquisacep(this.value); placeholder="00.000.000" required><br>
     <label>CEP: </label>
 </div>
 <div class="single-input" >
@@ -62,7 +62,7 @@
     </div>
 </div>
 <div class="single-input">
-    <input type="number" id="numero" name="numero" class="input" placeholder="Número do lote (opsiconal)" ><label>Número: </label>
+    <input type="number" id="numero" name="numero" class="input" placeholder="Número do lote" ><label>Número: </label>
     </div>
 </div>
 <div class="single-input">
@@ -94,6 +94,7 @@
             }catch(ex){}
         });
     });
+ 
 </script>
 
 <input type="submit" class="button" value="SALVAR" >

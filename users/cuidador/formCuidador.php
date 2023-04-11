@@ -19,22 +19,45 @@
 		<h3> Dados Pessoiasmm </h3>
 
 		<label for="name">CPF</label>
-		<input type="number" name="CPF_cuidador" id="CPF_cuidador" class="cpf-mask" required><br>
+		<input type="text"   name="CPF_cuidador" id="CPF_cuidador" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" placeholder="000.000.000-00"  required><br>
+		<script>
+		function formatar(mascara, documento){
+  			var i = documento.value.length;
+ 		 	var saida = mascara.substring(0,1);
+  			var texto = mascara.substring(i)
+
+  		if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+ 			 }			
+		}
+		</script>
 
 		<label for="name">Nome</label>
 		<input type="text" name="nome_cuidador" id="nome_cuidador" placeholder="Digite seu nome" required><br>
 
+
 		<label for="name">Nº de Telefone</label>
-		<input type="number" name="fone_cuidador" id="fone_cuidador" class="phone-mask" required><br>
+		<input type="text" name="fone_cuidador" id="fone_cuidador" maxlength="15" OnKeyPress="formatar('## #####-####', this)" placeholder="99 99999-9999" required><br>
+		<script>
+		function formatar(mascara, documento){
+ 			var i = documento.value.length;
+  			var saida = mascara.substring(0,1);
+  			var texto = mascara.substring(i)
+
+  			if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+ 			 }
+			}
+		</script>
 
 		<label for="name">E-mail</label>
-		<input type="text" name="email_cuidador" id="email_cuidador" placeholder="nickname@provedor.com" required><br>
-
+		<input type="email" name="email_cuidador" id="email_cuidador" placeholder="nickname@provedor.com" required><br>
+	
 		<label for="name">Senha</label>
-		<input type="text" name="senha_cuidador" id="senha_cuidador" placeholder="Crie uma senha" required><br>
+		<input type="password" name="senha_cuidador" id="senha_cuidador" placeholder="Crie uma senha" required><br>
 
 		<label for="name">Confirmar Senha</label>
-		<input type="text" name="Csenha_cuidador" id="Csenha_cuidador" placeholder="Confirme a senha" required><br>
+		<input type="password" name="Csenha_cuidador" id="Csenha_cuidador" placeholder="Confirme a senha" required><br>
 		<input type="submit" value="Próximo" name="Cadastrar">
 
 		<script> $(document).ready(function() { $('.cpf-mask').mask('000.000.000-00', {reverse: true}); $('.phone-mask').mask('(00) 0000-0000'); }); </script>
