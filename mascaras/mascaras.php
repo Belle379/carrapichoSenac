@@ -20,7 +20,7 @@ Máscara de telefone:
 
 html
 Copy code
-<input type="text" name="telefone" id="telefone" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
+<input type="text" name="telefone" id="telefone" maxlength="15" OnKeyPress="formatar('(##) #####-####', this)">
 javascript
 Copy code
 function formatar(mascara, documento){
