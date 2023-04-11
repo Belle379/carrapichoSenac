@@ -42,7 +42,7 @@
 		<input type="text" name="nome_veterinario" id="nome_veterinario" placeholder="Digite seu nome" required><br>
 
 		<label for="name">CRMV</label>
-		<input type="text" name="CRMV" id="CRMV" maxlength="6" OnKeyPress="formatar('#-####', this)">
+		<input type="text" name="CRMV" id="CRMV" maxlength="9" OnKeyPress="formatar('#####-##', this)">
 		<script>
 
 function formatar(mascara, documento){
