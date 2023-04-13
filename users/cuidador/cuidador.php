@@ -35,15 +35,15 @@
 			<div class="brand">C</div>
 			<div class="made-with">Carra <strong>picho</strong></div>
 		</a>-->
-	    <!--   Big container   -->
+	    <!--   Big container  -->
 	    <div class="container">
 	        <div class="row">
 		        <div class="col-sm-8 col-sm-offset-2">
-		            <!--      Wizard container        -->
+		            <!-- Wizard container   -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="orange" id="wizard">
-			                <form action="" method="">
-			                <!--        You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
+			                <form action="./cadastrarCuidador.php" method="POST">
+			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
 		                    	<div class="wizard-header">
 		                        	<h3 class="wizard-title">
@@ -91,7 +91,7 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Número de Celular</label>
-													<input type="number" class="form-control" name="fone_cuidador" id="fone_cuidador" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
+													<input type="text" class="form-control" name="fone_cuidador" id="fone_cuidador" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
 		                                    		<script>
 														function formatar(mascara, documento){
 															 var i = documento.value.length;
@@ -162,7 +162,7 @@
 		                                </div>
 		                            </div>
 		                            <div class="tab-pane" id="facilities">
-		                                <h4 class="info-text"> </h4>
+		                                <!--<h4 class="info-text"> </h4>-->
 		                                <div class="row">
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
@@ -279,11 +279,11 @@
 		                        </div>-->
 		                        <div class="wizard-footer">
 	                            	<div class="pull-right">
-	                                    <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Next' />
-	                                    <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd' name='finish' value='Finish' />
+	                                    <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Próximo' />
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd' name='cadastrar' value='Cadastrar' />
 	                                </div>
 	                                <div class="pull-left">
-	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />
 	                                </div>
 		                            <div class="clearfix"></div>
 		                        </div>
