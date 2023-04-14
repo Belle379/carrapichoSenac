@@ -387,7 +387,7 @@
                             </ul>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Torne-se um Adestrador!</a>
+                            <a href="users/adestrador/adestrador.php" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Torne-se um Adestrador!</a>
                         </div>
                     </div>
                 </div>
