@@ -59,7 +59,7 @@ $bairro = $_POST["bairro"];
 $endereco = $_POST["endereco"];
 $numero = $_POST["numero"];
 
-$query_endereco = "INSERT INTO tb_endereco (cep,uf,cidade,bairro,endereco,numero,) 
+$query_endereco = "INSERT INTO tb_endereco (cep,uf,cidade,bairro,endereco,numero) 
         VALUES ('$cep', '$uf','$cidade','$bairro','$endereco' ,'$numero')";
 $result_endereco = mysqli_query($conexao, $query_endereco);
         

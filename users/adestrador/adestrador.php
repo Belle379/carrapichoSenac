@@ -47,14 +47,14 @@
 
 		                    	<div class="wizard-header">
 		                        	<h3 class="wizard-title">
-		                        		Cadastre-se como veterinario!
+		                        		Cadastre-se como adestrador!
 		                        	</h3>
 									<h5> Estas informaçãoes irão nos permitir saber mais sobre você.</h5>
 		                    	</div>
 								<div class="wizard-navigation">
 									<ul>
 			                            <li><a href="#location" data-toggle="tab">Dados Basicos</a></li>
-			                            <li><a href="#type" data-toggle="tab">Serviços</a></li>
+			                            <li><a href="#type" data-toggle="tab">Certificado</a></li>
 			                            <li><a href="#facilities" data-toggle="tab">Endereço</a></li>
 			                        </ul>
 								</div>
@@ -68,13 +68,13 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Nome</label>
-													<input type="text" class="form-control" name="nome_veterinario" id="nome_veterinario" >
+													<input type="text" class="form-control" name="nome_adestrador" id="nome_adestrador" >
 		                                    	</div>
 		                                	</div>
 		                                	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">CPF</label>
-													<input type="text" class="form-control" name="CPF_veterinario" id="CPF_veterinario" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
+													<input type="text" class="form-control" name="CPF_adestrador" id="CPF_adestrador" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
 													<script>
 														function formatar(mascara, documento){
 															  var i = documento.value.length;
@@ -91,7 +91,7 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Número de Celular</label>
-													<input type="text" class="form-control" name="fone_veterinario" id="fone_veterinario" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
+													<input type="text" class="form-control" name="fone_adestrador" id="fone_adestrador" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
 		                                    		<script>
 														function formatar(mascara, documento){
 															 var i = documento.value.length;
@@ -109,19 +109,19 @@
 		                              	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Email</label>
-													<input type="email" class="form-control" name="email_veterinario" id="email_veterinario" >
+													<input type="email" class="form-control" name="email_adestrador" id="email_adestrador" >
 		                                    	</div>
 		                                	</div>
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Senha </label>
-													<input type="password" class="form-control" name="senha_veterinario" id="senha_veterinario" >
+													<input type="password" class="form-control" name="senha_adestrador" id="senha_adestrador" >
 		                                    	</div>
 		                                	</div>
 											<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Confirmar Senha</label>
-													<input type="password" class="form-control" name="Csenha_veterinario" id="Csenha_veterinario"  >
+													<input type="password" class="form-control" name="Csenha_adestrador" id="Csenha_adestrador"  >
 		                                    	</div>
 		                                	</div>
 		                                	
@@ -130,35 +130,40 @@
 		                         <div class="tab-pane" id="type">
 		                                <h4 class="info-text">  Infome quais serviços você irá prestar: </h4>
 		                                <div class="row">
-		                                    <div class="col-sm-10 col-sm-offset-1">
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Design">
-		                                                <div class="icon">
-		                                                    <i class="fas fa-baby-carriage"></i>
-		                                                </div>
-		                                                <h6>Pet Sitter</h6>
-		                                            </div>
-		                                        </div>
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Code">
-		                                                <div class="icon">
-		                                                    <i class="fas fa-hotel"></i>
-		                                                </div>
-		                                                <h6>Hospedeiro</h6>
-		                                            </div>
-		                                        </div>
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Develop">
-		                                                <div class="icon">
-		                                                    <i class=" fas fa-dog"></i>
-		                                                </div>
-		                                                <h6>Pessaeador</h6>
-		                                            </div>
-		                                        </div>
-		                                    </div>
+											<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Curso</label>
+													<input type="text" class="form-control" name="nomeCurso" id="nomeCurso" >
+		                                    	</div>
+		                                	</div>
+
+											<div class="col-lg-4 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">instituicao</label>
+													<input type="text" class="form-control" name="instituicao" id="instituicao" >
+		                                    	</div>
+		                                	</div>
+
+											<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Data de Início</label>
+													<input type="date" class="form-control" name="dt_inicio" id="dt_inicio" >
+		                                    	</div>
+														</div>
+														<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Data de Término</label>
+													<input type="date" class="form-control" name="dt_termino" id="dt_termino" >
+		                                    	</div>
+		                                	</div>
+											<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Insira arquivo certificado</label>
+													<input type="file" class="form-control" name="certificado" id="certificado" >
+		                                    	</div>
+		                                	</div>
+
+												
 		                                </div>
 		                            </div>
 		                            <div class="tab-pane" id="facilities">
