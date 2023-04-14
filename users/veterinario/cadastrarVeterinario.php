@@ -32,7 +32,7 @@ if ($result_dbveterinario > 0) {
     echo "Deu erro:  <br>" . mysqli_error($conexao);//caso contrario irá informar o erro. 
 }
 
-/.................................................Tabela Serviço Cuidador.....................................................//
+//.................................................Tabela Serviço Cuidador.....................................................//
 $consulta=  (isset($_POST['consulta']) && !empty($_POST['consulta'])) ? 1 : 0;
 $vacina= (isset($_POST['vacina']) && !empty($_POST['vacina'])) ? 1 : 0;
 $exame= (isset($_POST['exame']) && !empty($_POST['exame'])) ? 1 : 0;
@@ -48,6 +48,28 @@ if ($result_servicoVet > 0) {
 } else {
     echo "Deu erro:  <br>" . mysqli_error($conexao);//caso contrario irá informar o erro. 
 }
+
+
+//--------------------------- TABELA ENDEREÇO--------------------------//
+
+$cep = $_POST["cep"];
+$uf = $_POST["uf"];
+$cidade = $_POST["cidade"];
+$bairro = $_POST["bairro"];
+$endereco = $_POST["endereco"];
+$numero = $_POST["numero"];
+
+
+$query_endereco = "INSERT INTO tb_endereco (cep,uf,cidade,bairro,endereco,numero,complemento) 
+        VALUES ('$cep', '$uf','$cidade','$bairro','$endereco' ,'$numero')";
+$result_endereco = mysqli_query($conexao, $query_endereco);
+        
+if ($result_endereco > 0) {
+        echo "<script>alert('Seus dados foram salvos !')</script>";
+    } else {
+        echo "Deu erro:  <br>" . mysqli_error($conexao);
+    }
+
 
 mysqli_close($conexao);
 ?>

@@ -47,7 +47,7 @@
 
 		                    	<div class="wizard-header">
 		                        	<h3 class="wizard-title">
-		                        		Cadastre-se como adestrador!
+		                        		Cadastre-se como veterinario!
 		                        	</h3>
 									<h5> Estas informaçãoes irão nos permitir saber mais sobre você.</h5>
 		                    	</div>
@@ -68,13 +68,13 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Nome</label>
-													<input type="text" class="form-control" name="nome_adestrador" id="nome_adestrador" >
+													<input type="text" class="form-control" name="nome_veterinario" id="nome_veterinario" >
 		                                    	</div>
 		                                	</div>
 		                                	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">CPF</label>
-													<input type="text" class="form-control" name="CPF_adestrador" id="CPF_adestrador" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
+													<input type="text" class="form-control" name="CPF_veterinario" id="CPF_veterinario" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
 													<script>
 														function formatar(mascara, documento){
 															  var i = documento.value.length;
@@ -91,7 +91,7 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Número de Celular</label>
-													<input type="text" class="form-control" name="fone_adestrador" id="fone_adestrador" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
+													<input type="text" class="form-control" name="fone_veterinario" id="fone_veterinario" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
 		                                    		<script>
 														function formatar(mascara, documento){
 															 var i = documento.value.length;
@@ -109,19 +109,19 @@
 		                              	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Email</label>
-													<input type="email" class="form-control" name="email_adestrador" id="email_adestrador" >
+													<input type="email" class="form-control" name="email_veterinario" id="email_veterinario" >
 		                                    	</div>
 		                                	</div>
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Senha </label>
-													<input type="password" class="form-control" name="senha_adestrador" id="senha_adestrador" >
+													<input type="password" class="form-control" name="senha_veterinario" id="senha_veterinario" >
 		                                    	</div>
 		                                	</div>
 											<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Confirmar Senha</label>
-													<input type="password" class="form-control" name="Csenha_adestrador" id="Csenha_adestrador"  >
+													<input type="password" class="form-control" name="Csenha_veterinario" id="Csenha_veterinario"  >
 		                                    	</div>
 		                                	</div>
 		                                	

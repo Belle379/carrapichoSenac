@@ -41,13 +41,13 @@
 		        <div class="col-sm-8 col-sm-offset-2">
 		            <!-- Wizard container   -->
 		            <div class="wizard-container">
-		                <div class="card wizard-card" data-color="green" id="wizard">
-			                <form action="./cadastrarCuidador.php" method="POST">
+		                <div class="card wizard-card" data-color="orange" id="wizard">
+			                <form action="./cadastrarTutor.php" method="POST">
 			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
 		                    	<div class="wizard-header">
 		                        	<h3 class="wizard-title">
-		                        		Cadastre-se como cuidador!
+		                        		Cadastre-se como tutor !
 		                        	</h3>
 									<h5> Estas informaçãoes irão nos permitir saber mais sobre você.</h5>
 		                    	</div>
@@ -68,13 +68,13 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Nome</label>
-													<input type="text" class="form-control" name="nome_cuidador" id="nome_cuidador" >
+													<input type="text" class="form-control" name="nome_tutor" id="nome_tutor" >
 		                                    	</div>
 		                                	</div>
 		                                	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">CPF</label>
-													<input type="text" class="form-control" name="CPF_cuidador" id="CPF_cuidador" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
+													<input type="text" class="form-control" name="CPF_tutor" id="CPF_tutor" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
 													<script>
 														function formatar(mascara, documento){
 															  var i = documento.value.length;
@@ -91,7 +91,7 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Número de Celular</label>
-													<input type="text" class="form-control" name="fone_cuidador" id="fone_cuidador" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
+													<input type="text" class="form-control" name="fone_tutor" id="fone_tutor" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
 		                                    		<script>
 														function formatar(mascara, documento){
 															 var i = documento.value.length;
@@ -109,19 +109,19 @@
 		                              	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Email</label>
-													<input type="email" class="form-control" name="email_cuidador" id="email_cuidador" >
+													<input type="email" class="form-control" name="email_tutor" id="email_tutor" >
 		                                    	</div>
 		                                	</div>
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Senha </label>
-													<input type="password" class="form-control" name="senha_cuidador" id="senha_cuidador" >
+													<input type="password" class="form-control" name="senha_tutor" id="senha_tutor" >
 		                                    	</div>
 		                                	</div>
 											<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Confirmar Senha</label>
-													<input type="password" class="form-control" name="Csenha_cuidador" id="Csenha_cuidador"  >
+													<input type="password" class="form-control" name="Csenha_tutor" id="Csenha_tutor"  >
 		                                    	</div>
 		                                	</div>
 		                                	
@@ -138,6 +138,8 @@
 		                                                    <i class="fas fa-baby-carriage"></i>
 		                                                </div>
 		                                                <h6>Pet Sitter</h6>
+														
+														
 		                                            </div>
 		                                        </div>
 		                                        <div class="col-sm-4">
@@ -160,7 +162,7 @@
 		                                        </div>
 		                                    </div>
 		                                </div>
-		                            </div>
+		                            </div>		
 		                            <div class="tab-pane" id="facilities">
 		                                <!--<h4 class="info-text"> </h4>-->
 		                                <div class="row">
@@ -279,14 +281,15 @@
 		                        </div>-->
 		                        <div class="wizard-footer" >
 	                            	<div class="pull-right">
-	                                    <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Próximo' />
-	                                    <input type='submit' class='btn btn-finish btn-fill btn-success  btn-wd' name='cadastrar' value='Cadastrar' />
+	                                    <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Próximo' />
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-warning  btn-wd' name='cadastrar' value='Cadastrar' />
 	                                </div>
 	                                <div class="pull-left">
 	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />
 	                                </div>
 		                            <div class="clearfix"></div>
 		                        </div>
+								
 			                </form>
 		                </div>
 		            </div> <!-- wizard container -->
@@ -300,9 +303,8 @@
 	    </div>
 	</div>
 
-</body>
-	<!--   Core JS Files   -->
-	<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<!--   Core JS Files   -->
+<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
 
@@ -311,5 +313,8 @@
 
 	<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
 	<script src="assets/js/jquery.validate.min.js"></script>
+
+</body>
+	
 
 </html>
