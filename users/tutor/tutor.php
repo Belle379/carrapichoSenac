@@ -138,8 +138,6 @@
 		                                                    <i class="fas fa-baby-carriage"></i>
 		                                                </div>
 		                                                <h6>Pet Sitter</h6>
-														
-														
 		                                            </div>
 		                                        </div>
 		                                        <div class="col-sm-4">
