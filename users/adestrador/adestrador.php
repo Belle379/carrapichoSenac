@@ -42,7 +42,7 @@
 		            <!-- Wizard container   -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="orange" id="wizard">
-			                <form action="./cadastrarCuidador.php" method="POST">
+			                <form action="./cadastrarAdestrador.php" method="POST">
 			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
 		                    	<div class="wizard-header">
