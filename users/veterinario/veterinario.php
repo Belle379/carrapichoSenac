@@ -41,7 +41,7 @@
 		        <div class="col-sm-8 col-sm-offset-2">
 		            <!-- Wizard container   -->
 		            <div class="wizard-container">
-		                <div class="card wizard-card" data-color="orange" id="wizard">
+		                <div class="card wizard-card" data-color="blue" id="wizard">
 			                <form action="./cadastrarVeterinario.php" method="POST">
 			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
@@ -121,41 +121,63 @@
 											<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Confirmar Senha</label>
-													<input type="password" class="form-control" name="Csenha_veterinario" id="Csenha_veterinario"  >
+													<input type="password" class="form-control" name="Csenha_veterinario" id="Cbluesenha_veterinario"  >
 		                                    	</div>
 		                                	</div>
 		                                	
 		                            	</div>
 		                            </div>
 		                         <div class="tab-pane" id="type">
-		                                <h4 class="info-text">  Infome quais serviços você irá prestar: </h4>
+		                                <h4 class="info-text">  Informe quais serviços você irá prestar: </h4>
 		                                <div class="row">
-		                                    <div class="col-sm-10 col-sm-offset-1">
-		                                        <div class="col-sm-4">
+		                                    <div class="col-sm-12 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Informe seu CRMV</label>
+													<input type="text" class="form-control" name="CRMV" id="CRMV" >
+		                                    	</div>
+		                                        <div class="col-sm-2">
 		                                            <div class="choice" data-toggle="wizard-checkbox">
 		                                                <input type="checkbox" name="jobb" value="Design">
 		                                                <div class="icon">
-		                                                    <i class="fas fa-baby-carriage"></i>
+		                                                    <i class="fas fa-syringe"></i>
 		                                                </div>
-		                                                <h6>Pet Sitter</h6>
+		                                                <h6>Vacinação</h6>
 		                                            </div>
 		                                        </div>
-		                                        <div class="col-sm-4">
+		                                        <div class="col-sm-2">
 		                                            <div class="choice" data-toggle="wizard-checkbox">
 		                                                <input type="checkbox" name="jobb" value="Code">
 		                                                <div class="icon">
-		                                                    <i class="fas fa-hotel"></i>
+		                                                    <i class="fas fa-stethoscope"></i>
 		                                                </div>
-		                                                <h6>Hospedeiro</h6>
+		                                                <h6>Consultas</h6>
 		                                            </div>
 		                                        </div>
-		                                        <div class="col-sm-4">
+		                                        <div class="col-sm-2">
 		                                            <div class="choice" data-toggle="wizard-checkbox">
 		                                                <input type="checkbox" name="jobb" value="Develop">
 		                                                <div class="icon">
-		                                                    <i class=" fas fa-dog"></i>
+		                                                    <i class=" fas fa-business-time"></i>
 		                                                </div>
-		                                                <h6>Pessaeador</h6>
+		                                                <h6>Plantão</h6>
+		                                            </div>
+		                                        </div>
+												<div class="col-sm-2">
+		                                            <div class="choice" data-toggle="wizard-checkbox">
+		                                                <input type="checkbox" name="jobb" value="Develop">
+		                                                <div class="icon">
+		                                                    <i class=" fas fa-microscope"></i>
+		                                                </div>
+		                                                <h6>Exames</h6>
+		                                            </div>
+		                                        </div>
+												<div class="col-sm-2">
+		                                            <div class="choice" data-toggle="wizard-checkbox">
+		                                                <input type="checkbox" name="jobb" value="Develop">
+		                                                <div class="icon">
+		                                                    <i class=" fas fa-truck-medical"></i>
+		                                                </div>
+		                                                <h6>Emergência</h6>
 		                                            </div>
 		                                        </div>
 		                                    </div>
@@ -279,8 +301,8 @@
 		                        </div>-->
 		                        <div class="wizard-footer">
 	                            	<div class="pull-right">
-	                                    <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Próximo' />
-	                                    <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd' name='cadastrar' value='Cadastrar' />
+	                                    <input type='button' class='btn btn-next btn-fill  btn-info btn-wd' name='next' value='Próximo' />
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-info btn-wd' name='cadastrar' value='Cadastrar' />
 	                                </div>
 	                                <div class="pull-left">
 	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />
