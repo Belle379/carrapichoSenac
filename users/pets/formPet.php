@@ -34,6 +34,8 @@
 		<label for="vacina">Vacinado:</label><br>
 		<input type="checkbox" id="vacina" name="vacina" value="sim">
 		<label for="vacina">Sim</label><br>
+		<input type="checkbox" id="vacina" name="vacina" value="nao">
+												<label for="vacina">Não</label><br>
 
 		<label for="observacao">Observação:</label><br>
 		<textarea id="obs" name="obs"></textarea><br>

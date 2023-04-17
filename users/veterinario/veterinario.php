@@ -54,8 +54,10 @@
 								<div class="wizard-navigation">
 									<ul>
 			                            <li><a href="#location" data-toggle="tab">Dados Basicos</a></li>
-			                            <li><a href="#type" data-toggle="tab">Serviços</a></li>
+										<li><a href="#cert" data-toggle="tab">Formação</a></li>
+			                            <li><a href="#type" data-toggle="tab">Serviços</a></li>										
 			                            <li><a href="#facilities" data-toggle="tab">Endereço</a></li>
+										
 			                        </ul>
 								</div>
 
@@ -127,11 +129,51 @@
 		                                	
 		                            	</div>
 		                            </div>
+									
+									<div class="tab-pane" id="cert">
+		                                <h4 class="info-text">  Infome quais serviços você irá prestar: </h4>
+		                                <div class="row">
+											<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Curso</label>
+													<input type="text" class="form-control" name="nomeCurso" id="nomeCurso" >
+		                                    	</div>
+		                                	</div>
+
+											<div class="col-lg-4 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">instituicao</label>
+													<input type="text" class="form-control" name="instituicao" id="instituicao" >
+		                                    	</div>
+		                                	</div>
+
+											<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Data de Início</label>
+													<input type="date" class="form-control" name="dt_inicio" id="dt_inicio" >
+		                                    	</div>
+														</div>
+														<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Data de Término</label>
+													<input type="date" class="form-control" name="dt_termino" id="dt_termino" >
+		                                    	</div>
+		                                	</div>
+											<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Insira arquivo certificado</label>
+													<input type="file" class="form-control" name="certificado" id="certificado" >
+		                                    	</div>
+		                                	</div>
+
+												
+		                                </div>
+		                            </div>
 		                         <div class="tab-pane" id="type">
 		                                <h4 class="info-text">  Informe quais serviços você irá prestar: </h4>
 		                                <div class="row">
 		                                    <div class="col-sm-12 col-sm-offset-1">
-											<div class="form-group label-floating">
+											<div class="form-group label-floating">,
 		                                        	<label class="control-label">Informe seu CRMV</label>
 													<input type="text" class="form-control" name="CRMV" id="CRMV" >
 		                                    	</div>
@@ -252,6 +294,7 @@
 													<input type="number" id="numero" class="form-control" name="numero" class="input" >
 		                                    	</div>
 		                                	</div>
+											
 									
 											<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 <script>
@@ -279,8 +322,7 @@
  
 </script>
 
-		                                </div>
-		                            </div>
+
 		                          <!--  <div class="tab-pane" id="description">
 		                                <div class="row">
 		                                    <h4 class="info-text"> Drop us a small description. </h4>
@@ -309,8 +351,10 @@
 	                                </div>
 		                            <div class="clearfix"></div>
 		                        </div>
+								
 			                </form>
 		                </div>
+						
 		            </div> <!-- wizard container -->
 		        </div>
 	        </div> <!-- row -->

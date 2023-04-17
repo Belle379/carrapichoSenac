@@ -1,6 +1,6 @@
 <?php
 session_start(); //Iniciar a sessao
-include_once "conexao.php"; //Incluir a conexao com BD
+include_once "../conexao.php"; //Incluir a conexao com BD
 
 //var_dump(); // Geralmente se usa o Var_dump para testar uma  parte  especifica do codigo. Pode usar em qualquer parte do codigo
 //é só por depois do codigo que vc quer testar. 
