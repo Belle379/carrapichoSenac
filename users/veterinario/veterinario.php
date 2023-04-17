@@ -173,7 +173,7 @@
 		                                <h4 class="info-text">  Informe quais serviços você irá prestar: </h4>
 		                                <div class="row">
 		                                    <div class="col-sm-12 col-sm-offset-1">
-											<div class="form-group label-floating">
+											<div class="form-group label-floating">,
 		                                        	<label class="control-label">Informe seu CRMV</label>
 													<input type="text" class="form-control" name="CRMV" id="CRMV" >
 		                                    	</div>
