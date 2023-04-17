@@ -137,7 +137,7 @@
 		                                    	</div>
 		                                        <div class="col-sm-2">
 		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Design">
+		                                                <input type="checkbox" name="vacina" value="vacina">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-syringe"></i>
 		                                                </div>
@@ -146,7 +146,7 @@
 		                                        </div>
 		                                        <div class="col-sm-2">
 		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Code">
+		                                                <input type="checkbox" name="consulta" value="consulta">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-stethoscope"></i>
 		                                                </div>
@@ -155,7 +155,7 @@
 		                                        </div>
 		                                        <div class="col-sm-2">
 		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Develop">
+		                                                <input type="checkbox" name="plantao" value="plantao">
 		                                                <div class="icon">
 		                                                    <i class=" fas fa-business-time"></i>
 		                                                </div>
@@ -164,7 +164,7 @@
 		                                        </div>
 												<div class="col-sm-2">
 		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Develop">
+		                                                <input type="checkbox" name="exame" value="exame">
 		                                                <div class="icon">
 		                                                    <i class=" fas fa-microscope"></i>
 		                                                </div>
@@ -173,7 +173,7 @@
 		                                        </div>
 												<div class="col-sm-2">
 		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Develop">
+		                                                <input type="checkbox" name="emergencia" value="emergencia">
 		                                                <div class="icon">
 		                                                    <i class=" fas fa-truck-medical"></i>
 		                                                </div>
