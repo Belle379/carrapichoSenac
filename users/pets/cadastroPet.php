@@ -114,8 +114,7 @@
 		                                <div class="row">
 											<div class="col-sm-10 col-sm-offset-1">
 											<div class="form-group label-floating choice">
-										
-													<input type="file" class="form-control " name="fotoPet" id="fotoPet" >
+													<input type="file" class="form-control " name="" id="" >
 													<div class="icon">
 		                                                    <i class="fas fa-image"></i>
 		                                                </div>
@@ -124,8 +123,7 @@
 		                                	</div>									
 		                                </div>
 		                            </div>
-								
-								
+
 		                          <!--  <div class="tab-pane" id="description">
 		                                <div class="row">
 		                                    <h4 class="info-text"> Drop us a small description. </h4>
@@ -147,7 +145,8 @@
 		                        <div class="wizard-footer">
 	                            	<div class="pull-right">
 	                                    <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Próximo' />
-	                                    <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd' name='cadastrar' value='Cadastrar' />
+										<input type="submit" value="Enviar">
+	                                    <input type="submit" class='btn btn-finish btn-fill btn-warning btn-wd' name="cadastrar" value="Cadastrar"/>
 	                                </div>
 	                                <div class="pull-left">
 	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />
