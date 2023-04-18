@@ -42,7 +42,7 @@
 		            <!-- Wizard container   -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="orange" id="wizard">
-			                <form action="./cadastroPet.php" method="POST">
+			                <form action="./cadastrarPet.php" method="POST">
 			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
 		                    	<div class="wizard-header">
@@ -103,7 +103,7 @@
 											<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 												<label class="control-label">Observação</label>
-													<input type="text" class="form-control" name="Obs" id="Obs" >
+													<input type="text" class="form-control" name="obs" id="obs" >
 		                                    	</div>
 		                                	</div>
 		                                	
@@ -114,7 +114,8 @@
 		                                <div class="row">
 											<div class="col-sm-10 col-sm-offset-1">
 											<div class="form-group label-floating choice">
-													<input type="file" class="form-control " name="" id="" >
+										
+													<input type="file" class="form-control " name="fotoPet" id="fotoPet" >
 													<div class="icon">
 		                                                    <i class="fas fa-image"></i>
 		                                                </div>
@@ -123,7 +124,8 @@
 		                                	</div>									
 		                                </div>
 		                            </div>
-
+								
+								
 		                          <!--  <div class="tab-pane" id="description">
 		                                <div class="row">
 		                                    <h4 class="info-text"> Drop us a small description. </h4>
@@ -145,8 +147,7 @@
 		                        <div class="wizard-footer">
 	                            	<div class="pull-right">
 	                                    <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Próximo' />
-										<input type="submit" value="Enviar">
-	                                    <input type="submit" class='btn btn-finish btn-fill btn-warning btn-wd' name="cadastrar" value="Cadastrar"/>
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd' name='cadastrar' value='Cadastrar' />
 	                                </div>
 	                                <div class="pull-left">
 	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />
