@@ -1,3 +1,19 @@
+<?php
+
+include "conexao.php";
+
+session_start();
+$id_dono= $_SESSION['id_dono'];
+$id_cuidador = $_SESSION['id_cuidador'];
+$id_adestrador= $_SESSION['id_adestrador'];
+$id_veterinario = $_SESSION['id_veterinario'];
+$query= "SELECT * FROM `tb_dono`,`tb_cuidador`,`tb_adestrador`,`tb_veterinario` 
+ WHERE `id_dono` = '$id_dono',`id_cuidador` = '$id_cuidador',`id_adestrador` = '$id_adestrador',`id_veterinario` = '$id_veterinario'";
+                $result = mysqli_query($conexao, $query);
+                $bd_arr = mysqli_fetch_array($result);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -36,7 +52,7 @@
                         <!-- Post header-->
                         <header class="mb-4">
                             <!-- Post title-->
-                            <h1 class="fw-bolder mb-1">Usuario</h1>
+                            <h1 class="fw-bolder mb-1"><?php echo $nome_dono or $nome_cuidador or $nome_adestrador or $nome_veterinario ?></h1>
                             <!-- Post meta content-->
                             <div class="text-muted fst-italic mb-2">Tipo de funcionario</div>
                             <!-- Post categories-->
