@@ -98,7 +98,7 @@
     <div id="header-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100 " src="img/carousel-1.jpg" alt="Image" id="fotoc">
+                <img class="w-100 h-100" src="img/carousel-1.jpg" alt="Image" id="fotoc">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h3 class="text-white mb-3 d-none d-sm-block">Bem Vindo ao</h3>
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100" src="img/carousel-2.jpg" alt="Image" id="fotoc">
+                <img class="w-100 h-100" src="img/carousel-2.jpg" alt="Image" id="fotoc">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h3 class="text-white mb-3 d-none d-sm-block">Bem Vindo ao</h3>
