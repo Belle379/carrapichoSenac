@@ -98,7 +98,7 @@
     <div id="header-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100 " src="img/cachorrinho.jpg" alt="Image" id="fotoc">
+                <img class="w-100 " src="img/carousel-1.jpg" alt="Image" id="fotoc">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h3 class="text-white mb-3 d-none d-sm-block">Bem Vindo ao</h3>
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100" src="img/gatinho.jpg" alt="Image" id="fotoc">
+                <img class="w-100" src="img/carousel-2.jpg" alt="Image" id="fotoc">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h3 class="text-white mb-3 d-none d-sm-block">Bem Vindo ao</h3>
@@ -362,7 +362,7 @@
                             </ul>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-vet btn-block p-3" style="border-radius: 0;">Torne-se um Veterinário!</a>
+                            <a href="users/veterinario/veterinario.php" class="btn btn-vet btn-block p-3" style="border-radius: 0;">Torne-se um Veterinário!</a>
                         </div>
                     </div>
                 </div>
@@ -412,7 +412,7 @@
                             </ul>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="cadastro front/cuidador.html" class="btn btn-cu btn-block p-3" style="border-radius: 0;">Torne-se um Cuidador!</a>
+                            <a href="users/cuidador/cuidador.php" class="btn btn-cu btn-block p-3" style="border-radius: 0;">Torne-se um Cuidador!</a>
                         </div>
                     </div>
                 </div>
@@ -437,7 +437,7 @@
                             </ul>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-secondary btn-block p-3" style="border-radius: 0;">Torne-se um Tutor!</a>
+                            <a href="users/tutor/tutor.php" class="btn btn-secondary btn-block p-3" style="border-radius: 0;">Torne-se um Tutor!</a>
                         </div>
                     </div>
                 </div>

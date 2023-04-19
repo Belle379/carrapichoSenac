@@ -162,7 +162,7 @@
 											<div class="col-sm-5 col-sm-offset-1">
 											<div class="form-group label-floating">
 		                                        	<label class="control-label">Insira arquivo certificado</label>
-													<input type="file" class="form-control" name="certificado" id="certificado" >
+													<input type="file" class="form-control btn-cta" name="certificado" id="certificado" >
 		                                    	</div>
 		                                	</div>
 
