@@ -41,7 +41,7 @@
 		        <div class="col-sm-8 col-sm-offset-2">
 		            <!-- Wizard container   -->
 		            <div class="wizard-container">
-		                <div class="card wizard-card" data-color="orange" id="wizard">
+		                <div class="card wizard-card" data-color="purple" id="wizard">
 			                <form action="./cadastrarAdestrador.php" method="POST">
 			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
@@ -284,8 +284,8 @@
 		                        </div>-->
 		                        <div class="wizard-footer">
 	                            	<div class="pull-right">
-	                                    <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Próximo' />
-	                                    <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd' name='cadastrar' value='Cadastrar' />
+	                                    <input type='button' class='btn btn-next btn-fill btn-primary btn-wd' name='next' value='Próximo' />
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-primary btn-wd' name='cadastrar' value='Cadastrar' />
 	                                </div>
 	                                <div class="pull-left">
 	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />
