@@ -41,7 +41,7 @@
 		        <div class="col-sm-8 col-sm-offset-2">
 		            <!-- Wizard container   -->
 		            <div class="wizard-container">
-		                <div class="card wizard-card" data-color="orange" id="wizard">
+		                <div class="card wizard-card" data-color="red" id="wizard">
 			                <form action="./cadastrarPet.php" method="POST">
 			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
@@ -70,11 +70,23 @@
 													<input type="text" class="form-control" name="nome_pet" id="nome_pet" >
 		                                    	</div>
 		                                	</div>
-		                                	<div class="col-sm-5 col-sm-offset-1">
+											<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
-												<label class="control-label">Espécie do Pet</label>
+												<label class="control-label">Idade</label>
 													<input type="text" class="form-control" name="especie_pet" id="especie_pet" >
 												</div>
+		                                	</div>
+		                                	<div class="col-sm-4 col-sm-offset-1">
+		                                    	<div class="form-group label-floating">
+												<label class="control-label">Espécie</label>
+													<input type="text" class="form-control" name="especie_pet" id="especie_pet" >
+												</div>
+		                                	</div>
+											<div class="col-sm-5 col-sm-offset-1">
+		                                    	<div class="form-group label-floating">
+												<label class="control-label">Raça</label>
+													<input type="text" class="form-control" name="raca" id="raca" >
+		                                    	</div>
 		                                	</div>
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
@@ -85,18 +97,13 @@
 												<label for="femea">Fêmea</label><br>											
 												</div>
 		                                	</div>
-		                              	<div class="col-sm-5 col-sm-offset-1">
-		                                    	<div class="form-group label-floating">
-												<label class="control-label">Raça</label>
-													<input type="text" class="form-control" name="raca" id="raca" >
-		                                    	</div>
-		                                	</div>
+		                          
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 												<label for="vacina">Vacinado:</label><br>
-		 										<input type="checkbox" id="vacina" name="vacina" value="sim">
+		 										<input type="radio" id="vacina" name="vacina" value="sim">
 												<label for="vacina">Sim</label><br>
-												<input type="checkbox" id="vacina" name="vacina" value="nao">
+												<input type="radio" id="vacina" name="vacina" value="nao">
 												<label for="vacina">Não</label><br>
 		                                    	</div>
 		                                	</div>
@@ -146,8 +153,8 @@
 		                        </div>-->
 		                        <div class="wizard-footer">
 	                            	<div class="pull-right">
-	                                    <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Próximo' />
-	                                    <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd' name='cadastrar' value='Cadastrar' />
+	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Próximo' />
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-danger btn-wd' name='cadastrar' value='Cadastrar' />
 	                                </div>
 	                                <div class="pull-left">
 	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />

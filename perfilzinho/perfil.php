@@ -36,15 +36,16 @@
                         <!-- Post header-->
                         <header class="mb-4">
                             <!-- Post title-->
-                            <h1 class="fw-bolder mb-1">Filipe Lisboa Martins</h1>
-
+                            <h1 class="fw-bolder mb-1">Usuario</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Tipo de funcionario</div>
                             <!-- Post categories-->
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Add Pet </a>
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Solicitar Serviço</a>
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Histórico de Atividades </a>
                         </header>
                         <!-- Preview image figure-->
-                        <figure class="mb-4"><img class="img-fluid rounded" src="https://health-production.petlove.com.br/blog/post_193/destaque.jpg" alt="..." /></figure>
+                        <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
                         <!-- Post content
                         <section class="mb-5">
                             <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe.</p>
