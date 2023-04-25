@@ -19,7 +19,7 @@ $senha_dono = md5($_POST["senha_dono"]);
 
 //$query_algumacoisa é uma variavel para inserir o camando do banco.
 //dbdono = dados basicos dono 
-$query_dbdono = "INSERT INTO tb_dono ( CPF_dono, nome_dono,fone_dono,email_dono,senha) 
+$query_dbdono = "INSERT INTO tb_dono ( CPF_dono, nome_dono,fone_dono,email_dono,senha_dono) 
 VALUES ('$CPF_dono', '$nome_dono','$fone_dono','$email_dono','$senha_dono')";
 //$result_algumacoisa é outra variavel para conectar direcionar qual é o banco e qual é a tabela. 
 $result_dbdono = mysqli_query($conexao, $query_dbdono);

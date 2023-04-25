@@ -47,7 +47,7 @@
 
 		                    	<div class="wizard-header">
 		                        	<h3 class="wizard-title">
-		                        		Cadastre-se como tutor !
+		                        		Cadastre-se como Tutor !
 		                        	</h3>
 									<h5> Estas informaçãoes irão nos permitir saber mais sobre você.</h5>
 		                    	</div>
@@ -68,13 +68,13 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Nome</label>
-													<input type="text" class="form-control" name="nome_tutor" id="nome_tutor" >
+													<input type="text" class="form-control" name="nome_dono" id="nome_dono" >
 		                                    	</div>
 		                                	</div>
 		                                	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">CPF</label>
-													<input type="text" class="form-control" name="CPF_tutor" id="CPF_tutor" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
+													<input type="text" class="form-control" name="CPF_dono" id="CPF_dono" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
 													<script>
 														function formatar(mascara, documento){
 															  var i = documento.value.length;
@@ -91,7 +91,7 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Número de Celular</label>
-													<input type="text" class="form-control" name="fone_tutor" id="fone_tutor" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
+													<input type="text" class="form-control" name="fone_dono" id="fone_dono" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
 		                                    		<script>
 														function formatar(mascara, documento){
 															 var i = documento.value.length;
@@ -109,19 +109,19 @@
 		                              	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Email</label>
-													<input type="email" class="form-control" name="email_tutor" id="email_tutor" >
+													<input type="email" class="form-control" name="email_dono" id="email_dono" >
 		                                    	</div>
 		                                	</div>
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Senha </label>
-													<input type="password" class="form-control" name="senha_tutor" id="senha_tutor" >
+													<input type="password" class="form-control" name="senha_dono" id="senha_dono" >
 		                                    	</div>
 		                                	</div>
 											<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Confirmar Senha</label>
-													<input type="password" class="form-control" name="Csenha_tutor" id="Csenha_tutor"  >
+													<input type="password" class="form-control" name="Csenha_dono" id="Csenha_dono"  >
 		                                    	</div>
 		                                	</div>
 		                                	

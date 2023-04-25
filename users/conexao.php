@@ -2,7 +2,7 @@
 define('HOST', '127.0.0.1');
 define('USUARIO', 'root');
 define('SENHA', '');
-define('DB', 'carrapicho');
+define('DB', 'carrapicho_bd');
 
 $conexao = mysqli_connect(HOST, USUARIO, SENHA, DB) or die('Não foi possível conectar');
 
