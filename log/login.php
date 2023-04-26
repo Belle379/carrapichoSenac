@@ -22,7 +22,7 @@ WHERE  ( tb_dono.email_dono = '$email' OR tb_cuidador.email_cuidador = '$email' 
 AND    ( tb_dono.senha_dono = '$senha' OR tb_cuidador.senha_cuidador = '$senha' OR tb_adestrador.senha_adestrador = '$senha' OR tb_veterinario.senha_veterinario= '$senha')";
 
 $result = $conexao->query($codlogin);
-
+if ()
 if(mysqli_num_rows($result) < 1){
     unset($_SESSION['email_dono']);
     unset($_SESSION['senha_dono']);
