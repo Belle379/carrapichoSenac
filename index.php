@@ -46,7 +46,7 @@
                     <a href="#sobrenos" class="nav-item nav-link">Sobre Nós</a>
                     <a href="#atividades" class="nav-item nav-link">Atividades</a>
                     <a href="#participe" class="nav-item nav-link">Cadastre-se</a>
-                    <a href="contact.html" class="nav-item nav-link">Fale Conosco</a>
+
                     <div class="nav-item dropdown">
                     </div>
                    
@@ -104,8 +104,8 @@
                         <h3 class="text-white mb-3 d-none d-sm-block">Bem Vindo ao</h3>
                         <h1 class="display-3 text-white mb-3">CARRAPICHO</h1>
                         <h5 class="text-white mb-3 d-none d-sm-block">Sempre ajudando a cuidar de seu pet</h5>
-                        <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Cadastre-se</a>
-                        <a href="" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Saiba Mais </a>
+                        <a href="#participe" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Cadastre-se</a>
+                        <a href="#sobrenos" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Sobre nós </a>
                     </div>
                 </div>
             </div>
@@ -116,8 +116,8 @@
                         <h3 class="text-white mb-3 d-none d-sm-block">Bem Vindo ao</h3>
                         <h1 class="display-3 text-white mb-3">CARRAPICHO</h1>
                         <h5 class="text-white mb-3 d-none d-sm-block"> Junte-se a nós em prol dessa causa</h5>
-                        <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Cadastre-se</a>
-                        <a href="" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Saiaba Mais </a>
+                        <a href="#participe" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Cadastre-se</a>
+                        <a href="#sobrenos" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Sobre nós </a>
                     </div>
                 </div>
             </div>
@@ -229,14 +229,13 @@
             <div class="col-lg-7 pb-5 pb-lg-0 px-3 px-lg-5">
                 <h2 class="text-info mb-1">Sobre a</h2>
                 <h1 class="display-4 mb-4"><span class="text-primary">Carrapicho</span></h1>
-                <h5 class="text-muted mb-3">Amet stet amet ut. Sit no vero vero no dolor. Sed erat ut sea. Just clita ut stet kasd at diam sit erat vero sit.</h5>
-                <p class="mb-4">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
+                <h5 class="text-muted mb-3">   Aqui, nosso objetivo é unir pessoas com o mesmo amor pelos animais e oferecer um espaço seguro e confiável para encontrar o profissional ideal para o seu pet.</h5>
+                <p class="mb-4">   A equipe do Carrapicho é formada por amantes de animais e especialistas em tecnologia, dedicados a fornecer a melhor experiência possível para nossos usuários. Nosso compromisso é oferecer uma plataforma fácil de usar, com recursos avançados de busca para ajudá-lo a encontrar o profissional perfeito para o seu pet. Estamos sempre trabalhando para melhorar nossos serviços e oferecer suporte aos nossos usuários em todas as etapas do processo. Obrigado por escolher Carrapicho!</p>
                 <ul class="list-inline">
-                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Ajudamos os animais</h5></li>
-                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Ajudamos quem ama os animais</h5></li>
+               
 
                 </ul>
-                <a href="" class="btn btn-lg btn-primary mt-3 px-4">Saiba mais</a>
+              
             </div>
             <div class="col-lg-5">
                 <div class="row px-3">
