@@ -290,6 +290,7 @@
 	                                <div class="pull-left">
 	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />
 	                                </div>
+									
 		                            <div class="clearfix"></div>
 		                        </div>
 			                </form>

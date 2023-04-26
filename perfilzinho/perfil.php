@@ -36,7 +36,8 @@
                         <!-- Post header-->
                         <header class="mb-4">
                             <!-- Post title-->
-                            <h1 class="fw-bolder mb-1">Usuario</h1>
+                            <?php ?>
+                            <h1 class="fw-bolder mb-1">Usuargvadfgfgmhjgtrhigrjehjopgtphjo</h1>
                             <!-- Post meta content-->
                             <div class="text-muted fst-italic mb-2">Tipo de funcionario</div>
                             <!-- Post categories-->
