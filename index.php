@@ -387,9 +387,7 @@
                     
                     </div>
 
-                    <div class="card-footer border-0 p-0">
-                            <a href="users/veterinario/veterinario.php" class="btn btn-primary btn-block p-3 fazparte" style="border-radius: 0;">Cadastre-se</a>
-                        </div>
+                    
                 </div>
                 <div class="col-lg-3 mb-3">
                     <div class="card border-0">
@@ -436,6 +434,9 @@
                         </div>
                         
                     </div>
+                    
+                            <a onclick="window.location.href='users/tutor/formUser.php'" class="btn btn-primary btn-block p-3 fazparte">Cadastre-se</a>
+                        </div>
                 </div>
             </div>
         </div>
