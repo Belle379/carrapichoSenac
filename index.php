@@ -51,6 +51,7 @@
                     </div>
                    
                 </div>
+                <form action="log/login.php" metohod="POST">
                 <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -62,17 +63,17 @@
                       </button>
                     </div>
                     <div class="modal-body mx-3">
-                    <?php include 'cadastro front/cuidador.html';?>
+                
                       <div class="md-form mb-5">
-                        <i class="fas fa-envelope prefix grey-text"></i>
-                        <input type="email" id="defaultForm-email" class="form-control validate">
+                      
                         <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
+                        <input type="email" id="defaultForm-email" class="form-control validate" name="email">
                       </div>
               
                       <div class="md-form mb-4">
-                        <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="password" id="defaultForm-pass" class="form-control validate">
+
                         <label data-error="wrong" data-success="right" for="defaultForm-pass">Senha</label>
+                        <input type="password" id="defaultForm-pass" class="form-control validate" name="senha">
                       </div>
               
                     </div>
@@ -82,7 +83,7 @@
                   </div>
                 </div>
               </div>
-              
+</form>
               <div class="text-center">
                 <a href="" class="btn btn-lg btn-primary px-3 d-none d-lg-block p-md-3  " data-toggle="modal" data-target="#modalLoginForm">Entrar</a>
               </div>
