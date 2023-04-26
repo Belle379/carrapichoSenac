@@ -7,10 +7,9 @@
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-
+	
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
 	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
-
 	<!--     Fonts and icons     -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -246,17 +245,17 @@
 		                                <h4 class="info-text">  Infome que tipo de funcionário irá desempenhar </h4>
 		                                <div class="row">
 		                                    <div class="col-sm-10 col-sm-offset-1">
-		                                        <div class="col-sm-3">
-		                                            <div class="choice" data-toggle="wizard-radio">
+											<div class="col-sm-3">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="This is good if you travel alone.">
 		                                                <input type="radio" name="tutor" value="tutor">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-paw"></i>
 		                                                </div>
-		                                                <h6>Sou um user</h6>
+		                                                <h6>Sou um Tutor</h6>
 		                                            </div>
 		                                        </div>
 		                                        <div class="col-sm-3">
-		                                            <div class="choice" data-toggle="wizard-radio">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip">
 		                                                <input type="radio" name="cuidador" value="cuidador">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-cat"></i>
@@ -265,7 +264,7 @@
 		                                            </div>
 		                                        </div>
 		                                        <div class="col-sm-3">
-		                                            <div class="choice" data-toggle="wizard-radio">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip">
 		                                                <input type="radio" name="adestrador" value="adestrador">
 		                                                <div class="icon">
 		                                                    <i class=" fas fa-dog"></i>
@@ -274,7 +273,7 @@
 		                                            </div>
 		                                        </div>
 												<div class="col-sm-3">
-		                                            <div class="choice" data-toggle="wizard-radio">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip">
 		                                                <input type="radio" name="veterinario" value="veterinario">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-stethoscope"></i>

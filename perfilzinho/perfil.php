@@ -1,3 +1,15 @@
+<?php
+
+include "conexao.php";
+
+session_start();
+$id_user = $_SESSION['id_user'];
+ $query = "SELECT * FROM tb_user WHERE id_user = '$id_user'";
+                $result = mysqli_query($conexao, $query);
+                $bd_arr = mysqli_fetch_array($result);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -37,7 +49,7 @@
                         <header class="mb-4">
                             <!-- Post title-->
                             <?php ?>
-                            <h1 class="fw-bolder mb-1">Usuargvadfgfgmhjgtrhigrjehjopgtphjo</h1>
+                            <h1 class="fw-bolder mb-1"><?php echo $bd_arr['nome_user'] ?></h1>
                             <!-- Post meta content-->
                             <div class="text-muted fst-italic mb-2">Tipo de funcionario</div>
                             <!-- Post categories-->

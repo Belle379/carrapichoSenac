@@ -3,55 +3,40 @@ session_start();
 
 include "conexao.php";
 
-
-    // print_r($_REQUEST);
-    if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']))
-    {
-        // Acessa
-        include_once('config.php');
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
+$email = mysqli_real_escape_string($conexao, trim($_POST['email_user']));
+$senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha_user'])));
 
       //  print_r('Email: ' . $email);
       //  print_r('<br>');
       //  print_r('Senha: ' . $senha);
 
-$codlogin ="SELECT tb_dono.email_dono , tb_cuidador.email_cuidador , tb_adestrador.email_adestrador, tb_veterinario.email_veterinario, tb_dono.senha_dono , tb_cuidador.senha_cuidador , tb_adestrador.senha_adestrador, tb_veterinario.senha_veterinario 
-FROM  tb_dono, tb_cuidador, tb_adestrador, tb_veterinario 
+$codlogin = "SELECT * FROM tb_user WHERE email_user =  '$email'";
 
-WHERE  ( tb_dono.email_dono = '$email' OR tb_cuidador.email_cuidador = '$email' OR tb_adestrador.email_adestrador = '$email' OR tb_veterinario.email_veterinario = '$email' )
-AND    ( tb_dono.senha_dono = '$senha' OR tb_cuidador.senha_cuidador = '$senha' OR tb_adestrador.senha_adestrador = '$senha' OR tb_veterinario.senha_veterinario = '$senha')";
+$result = mysqli_query($conexao, $codlogin);
+$row = mysqli_num_rows($result);
 
-$result = $conexao->query($codlogin);
+if($row > 0){
+	
+	$bd_arr = mysqli_fetch_array($result);
+	
+	mysqli_close($conexao);
+	
+	if($bd_arr['senha_user'] == $senha){	
+		header("Location: ../feed.html");
+		
+		
+		$_SESSION['nome_user'] = $bd_arr['nome_user'];
+		$_SESSION['logado'] = true;
+		$_SESSION['id_user'] = $bd_arr['id_user']; 
+	
+		//var_dump($row);
+		//die;		
+	
+	}else{
+		echo "Por favor verificar senha !";
+	}
 
-if(mysqli_num_rows($result) < 1){
-    unset($_SESSION['email_dono']);
-    unset($_SESSION['senha_dono']);
-    header('Location: login.php');
+}else{
+	echo "Não foi encontrado nenhum cadastro para esse E-mail!";
 }
-else
-{
-    $_SESSION['email_cuidador'] = $email;
-    $_SESSION['senha_cuidador'] = $senha;
-    header('Location: sistema.php');
-}
-if(mysqli_num_rows($result) < 1)
-{
-    $_SESSION['email_adestrador'] = $email;
-    $_SESSION['senha_adestrador'] = $senha;
-    header('Location: sistema.php');
-}
-if(mysqli_num_rows($result) < 1)
-{
-    $_SESSION['email_veterinario'] = $email;
-    $_SESSION['senha_veterinario'] = $senha;
-    header('Location: sistema.php');
-}
-if(mysqli_num_rows($result) < 1)
-{
-// Não acessa
-header('Location: login.php');
-}
-
-    }
 ?>

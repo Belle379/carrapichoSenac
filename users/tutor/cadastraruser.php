@@ -56,10 +56,11 @@ if ($result_endereco > 0) {
 
 //.................................................Tabela Serviço Cuidador.....................................................//
 
-$tutor= (isset($_POST['tutor']) && !empty($_POST['tutor'])) ? 1 : 0;
-$cuidador = (isset($_POST['cuidador ']) && !empty($_POST['cuidador'])) ? 1 : 0;
-$adestrador= (isset($_POST['adestrador']) && !empty($_POST['adestrador'])) ? 1 : 0;
+$tutor= (isset($_POST['tutor']) && !empty($_POST['tutor'])) ? 1 : 0;;
+$cuidador =  (isset($_POST['cuidador']) && !empty($_POST['cuidador'])) ? 1 : 0;;
+$adestrador = (isset($_POST['adestrador']) && !empty($_POST['adestrador'])) ? 1 : 0;
 $veterinario= (isset($_POST['veterinario']) && !empty($_POST['veterinario'])) ? 1 : 0;
+
 
 //servicoC = servico Cuidador 
 $query_tpuser = "INSERT INTO tb_tpuser (tutor,cuidador,adestrador,veterinario) 

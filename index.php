@@ -70,13 +70,13 @@
                       <div class="md-form mb-5">
                       
                         <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
-                        <input type="email" id="defaultForm-email" class="form-control validate" name="email">
+                        <input type="email" id="defaultForm-email" class="form-control validate" name="email_user">
                       </div>
               
                       <div class="md-form mb-4">
 
                         <label data-error="wrong" data-success="right" for="defaultForm-pass">Senha</label>
-                        <input type="password" id="defaultForm-pass" class="form-control validate" name="senha">
+                        <input type="password" id="defaultForm-pass" class="form-control validate" name="senha_user">
 
                       </div>
               
