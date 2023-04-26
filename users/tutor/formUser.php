@@ -19,7 +19,7 @@
 	<script src="https://kit.fontawesome.com/8c2ef3f346.js" crossorigin="anonymous"></script>
 	<!-- CSS Files -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="assets/css/material-bootstrap-wizarde.css" rel="stylesheet" />
+	<link href="assets/css/material-bootstrap-wizardee.css" rel="stylesheet" />
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link href="assets/css/demo.css" rel="stylesheet" />
@@ -42,20 +42,26 @@
 		            <!-- Wizard container   -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="orange" id="wizard">
-			                <form action="./cadastrarTutor.php" method="POST">
+						
+	                  <input type='button' class='btn btn_close btn-fill btn-inverse ' name='previous' value='X' onclick="window.location.href='../../index.php'" />
+	                               
+						<form action="./cadastraruser.php" method="POST">
 			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
 		                    	<div class="wizard-header">
 		                        	<h3 class="wizard-title">
-		                        		Cadastre-se como Tutor !
+
+
+		                        		Cadastre-se!
+
 		                        	</h3>
 									<h5> Estas informaçãoes irão nos permitir saber mais sobre você.</h5>
 		                    	</div>
 								<div class="wizard-navigation">
 									<ul>
 			                            <li><a href="#location" data-toggle="tab">Dados Basicos</a></li>
-			                            <li><a href="#type" data-toggle="tab">Serviços</a></li>
 			                            <li><a href="#facilities" data-toggle="tab">Endereço</a></li>
+										<li><a href="#type" data-toggle="tab">Tipo de Usuário</a></li>
 			                        </ul>
 								</div>
 
@@ -68,13 +74,16 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Nome</label>
-													<input type="text" class="form-control" name="nome_dono" id="nome_dono" >
+													<input type="text" class="form-control" name="nome_user" id="nome_user" >
+
 		                                    	</div>
 		                                	</div>
 		                                	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">CPF</label>
-													<input type="text" class="form-control" name="CPF_dono" id="CPF_dono" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
+													<input type="text" class="form-control" name="CPF_user" id="CPF_user" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
+
+
 													<script>
 														function formatar(mascara, documento){
 															  var i = documento.value.length;
@@ -91,7 +100,9 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Número de Celular</label>
-													<input type="text" class="form-control" name="fone_dono" id="fone_dono" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
+
+													<input type="text" class="form-control" name="fone_user" id="fone_user" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
+
 		                                    		<script>
 														function formatar(mascara, documento){
 															 var i = documento.value.length;
@@ -109,58 +120,30 @@
 		                              	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Email</label>
-													<input type="email" class="form-control" name="email_dono" id="email_dono" >
+
+													<input type="email" class="form-control" name="email_user" id="email_user" >
+
 		                                    	</div>
 		                                	</div>
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Senha </label>
-													<input type="password" class="form-control" name="senha_dono" id="senha_dono" >
+
+													<input type="password" class="form-control" name="senha_user" id="senha_user" >
+
 		                                    	</div>
 		                                	</div>
 											<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Confirmar Senha</label>
-													<input type="password" class="form-control" name="Csenha_dono" id="Csenha_dono"  >
+													<input type="password" class="form-control" name="Csenha_user" id="Csenha_user"  >
+
 		                                    	</div>
 		                                	</div>
 		                                	
 		                            	</div>
 		                            </div>
-		                            <div class="tab-pane" id="type">
-		                                <h4 class="info-text">  Infome quais serviços você irá prestar: </h4>
-		                                <div class="row">
-		                                    <div class="col-sm-10 col-sm-offset-1">
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Design">
-		                                                <div class="icon">
-		                                                    <i class="fas fa-baby-carriage"></i>
-		                                                </div>
-		                                                <h6>Pet Sitter</h6>
-		                                            </div>
-		                                        </div>
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Code">
-		                                                <div class="icon">
-		                                                    <i class="fas fa-hotel"></i>
-		                                                </div>
-		                                                <h6>Hospedeiro</h6>
-		                                            </div>
-		                                        </div>
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Develop">
-		                                                <div class="icon">
-		                                                    <i class=" fas fa-dog"></i>
-		                                                </div>
-		                                                <h6>Pessaeador</h6>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </div>
-		                            </div>		
+		                            
 		                            <div class="tab-pane" id="facilities">
 		                                <!--<h4 class="info-text"> </h4>-->
 		                                <div class="row">
@@ -259,24 +242,50 @@
 
 		                                </div>
 		                            </div>
-		                          <!--  <div class="tab-pane" id="description">
+									<div class="tab-pane" id="type">
+		                                <h4 class="info-text">  Infome que tipo de funcionário irá desempenhar </h4>
 		                                <div class="row">
-		                                    <h4 class="info-text"> Drop us a small description. </h4>
-		                                    <div class="col-sm-6 col-sm-offset-1">
-		                                        <div class="form-group label-floating">
-		                                            <label class="control-label">Place description</label>
-		                                            <textarea class="form-control" placeholder="" rows="9"></textarea>
+		                                    <div class="col-sm-10 col-sm-offset-1">
+		                                        <div class="col-sm-3">
+		                                            <div class="choice" data-toggle="wizard-radio">
+		                                                <input type="radio" name="tutor" value="tutor">
+		                                                <div class="icon">
+		                                                    <i class="fas fa-paw"></i>
+		                                                </div>
+		                                                <h6>Sou um user</h6>
+		                                            </div>
 		                                        </div>
-		                                    </div>
-		                                    <div class="col-sm-4">
-		                                    	<div class="form-group label-floating">
-		                                            <label class="control-label">Example</label>
-		                                            <p class="description">"The place is really nice. We use it every sunday when we go fishing. It is so awesome."</p>
+		                                        <div class="col-sm-3">
+		                                            <div class="choice" data-toggle="wizard-radio">
+		                                                <input type="radio" name="cuidador" value="cuidador">
+		                                                <div class="icon">
+		                                                    <i class="fas fa-cat"></i>
+		                                                </div>
+		                                                <h6> Sou um cuidador</h6>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3">
+		                                            <div class="choice" data-toggle="wizard-radio">
+		                                                <input type="radio" name="adestrador" value="adestrador">
+		                                                <div class="icon">
+		                                                    <i class=" fas fa-dog"></i>
+		                                                </div>
+		                                                <h6>Sou um adestrador</h6>
+		                                            </div>
+		                                        </div>
+												<div class="col-sm-3">
+		                                            <div class="choice" data-toggle="wizard-radio">
+		                                                <input type="radio" name="veterinario" value="veterinario">
+		                                                <div class="icon">
+		                                                    <i class="fas fa-stethoscope"></i>
+		                                                </div>
+		                                                <h6>Sou um veterinário</h6>
+		                                            </div>
 		                                        </div>
 		                                    </div>
 		                                </div>
-		                            </div>
-		                        </div>-->
+		                            </div>		
+		                  
 		                        <div class="wizard-footer" >
 	                            	<div class="pull-right">
 	                                    <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Próximo' />

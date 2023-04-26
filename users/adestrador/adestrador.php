@@ -26,6 +26,7 @@
 </head>
 
 <body>
+<button onclick="window.location.href='../../index.php'">Voltar ao menu principal</button>
 	<div class="image-container set-full-height" style="background-image: url('assets/img/gationho.jpg')">
 	 
 		
@@ -44,7 +45,6 @@
 		                <div class="card wizard-card" data-color="purple" id="wizard">
 			                <form action="./cadastrarAdestrador.php" method="POST">
 			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
-
 		                    	<div class="wizard-header">
 		                        	<h3 class="wizard-title">
 		                        		Cadastre-se como adestrador!
@@ -290,6 +290,7 @@
 	                                <div class="pull-left">
 	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />
 	                                </div>
+									
 		                            <div class="clearfix"></div>
 		                        </div>
 			                </form>

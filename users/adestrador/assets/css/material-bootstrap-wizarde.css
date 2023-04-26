@@ -542,7 +542,8 @@ output {
     background-color: #f44336; }
   .label.label-rose {
     background-color: #e91e63; }
-
+  .label.label-trans {
+    background-color: #e91e6200; }
 .form-control,
 .form-group .form-control {
   border: 0;
