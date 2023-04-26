@@ -25,7 +25,7 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/styllee.css" rel="stylesheet">
+    <link href="css/stylleee.css" rel="stylesheet">
 </head>
 
 <body>
@@ -361,9 +361,7 @@
                                 <li class="list-group-item p-2"><i class=" text-secondary mr-2"></i>Emergência</li>
                             </ul>
                         </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="users/veterinario/veterinario.php" class="btn btn-vet btn-block p-3" style="border-radius: 0;">Torne-se um Veterinário!</a>
-                        </div>
+                       
                     </div>
                 </div>
                 <div class="col-lg-3 mb-3">
@@ -386,10 +384,12 @@
                                 <li class="list-group-item p-2"><i class=" text-secondary mr-2"></i>Corrigir maus hábitos</li>
                             </ul>
                         </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="users/adestrador/adestrador.php" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Torne-se um Adestrador!</a>
-                        </div>
+                    
                     </div>
+
+                    <div class="card-footer border-0 p-0">
+                            <a href="users/veterinario/veterinario.php" class="btn btn-primary btn-block p-3 fazparte" style="border-radius: 0;">Cadastre-se</a>
+                        </div>
                 </div>
                 <div class="col-lg-3 mb-3">
                     <div class="card border-0">
@@ -411,9 +411,7 @@
                                 <li class="list-group-item p-2"><i class=" text-secondary mr-2"></i>Levar para passear</li>
                             </ul>
                         </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="users/cuidador/cuidador.php" class="btn btn-cu btn-block p-3" style="border-radius: 0;">Torne-se um Cuidador!</a>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-3 mb-3">
@@ -436,9 +434,7 @@
                                 <li class="list-group-item p-2"><i class=" text-secondary mr-2"></i>Seu pet mais saudavel</li>
                             </ul>
                         </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="users/tutor/tutor.php" class="btn btn-secondary btn-block p-3" style="border-radius: 0;">Torne-se um Tutor!</a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
