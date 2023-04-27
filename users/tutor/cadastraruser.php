@@ -74,7 +74,7 @@ if ($result_tpuser > 0) {
 
 switch ($tpuser) {
     case "tutor":
-        header('Location: ../index.php');
+        header("Location:../index.php");
         echo "<script>alert('Dados Salvos!!! <br> Clique em [ENTRAR] e faça seu log in')</script>";
         break;
     case "cuidador":
@@ -85,8 +85,8 @@ switch ($tpuser) {
         header("Location:../adestrador/formadestrador.php");
         echo "<script>alert('Seus dados foram salvos !')</script>";
         break;
-    case "veterinário":
-        header("Location:../veterinario/formveterinario.php");
+    case "veterinario":
+        header("Location:../veterinario/formVeterinario.php");
         echo "<script>alert('Seus dados foram salvos !')</script>";
         break;
     }

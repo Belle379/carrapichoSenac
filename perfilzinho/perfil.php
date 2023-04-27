@@ -26,15 +26,15 @@ $id_user = $_SESSION['id_user'];
     <body>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+            <div class="container"  >
+            <img onclick="window.location.href='index.php'" src="../users/tutor/assets/img/apple-icon.png" width="50px" height="50px" alt="" />
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../users/pets/cadastroPet.php">Adionar Pet</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Histórico</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../feed.html">Volta</a></li>
+                       
                     </ul>
                 </div>
             </div>
@@ -51,7 +51,8 @@ $id_user = $_SESSION['id_user'];
                             <?php ?>
                             <h1 class="fw-bolder mb-1"><?php echo $bd_arr['nome_user'] ?></h1>
                             <!-- Post meta content-->
-                            <div class="text-muted fst-italic mb-2">Tipo de funcionario</div>
+                 
+                            <div class="text-muted fst-italic mb-2"></div>
                             <!-- Post categories-->
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Add Pet </a>
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Solicitar Serviço</a>

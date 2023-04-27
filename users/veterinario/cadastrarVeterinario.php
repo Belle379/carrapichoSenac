@@ -10,13 +10,14 @@ include_once "../conexao.php"; //Incluir a conexao com BD
 
 
 //.................................................Tabela Serviço Cuidador.....................................................//
+$CRMV = $_POST ['CRMV'];
 $consulta=  (isset($_POST['consulta']) && !empty($_POST['consulta'])) ? 1 : 0;
 $vacina= (isset($_POST['vacina']) && !empty($_POST['vacina'])) ? 1 : 0;
 $exame= (isset($_POST['exame']) && !empty($_POST['exame'])) ? 1 : 0;
 $emergencia= (isset($_POST['emergencia']) && !empty($_POST['emergencia'])) ? 1 : 0;
 $plantao= (isset($_POST['plantao']) && !empty($_POST['plantao'])) ? 1 : 0;
-$query_servicoVet = "INSERT INTO tb_servicovet (consulta,vacina,exame,emergencia,plantao) 
-VALUES ('$consulta', '$vacina', '$exame', '$emergencia','$plantao')";
+$query_servicoVet = "INSERT INTO tb_servicovet (CRMV, consulta,vacina,exame,emergencia,plantao) 
+VALUES ('$CRMV','$consulta', '$vacina', '$exame', '$emergencia','$plantao')";
 
 $result_servicoVet = mysqli_query($conexao, $query_servicoVet);
 

@@ -52,7 +52,7 @@
                    
                 </div>
 
-                <form action="log/login.php" metohod="POST">
+                <form action="log/login.php"  method="POST">
 
                 <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                 aria-hidden="true">
@@ -70,7 +70,7 @@
                       <div class="md-form mb-5">
                       
                         <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
-                        <input type="email" id="defaultForm-email" class="form-control validate" name="email_user">
+                        <input type="email" id="defaultForm-email " class="form-control validate" name="email_user">
                       </div>
               
                       <div class="md-form mb-4">

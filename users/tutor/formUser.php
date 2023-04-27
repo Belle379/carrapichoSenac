@@ -139,7 +139,22 @@
 
 		                                    	</div>
 		                                	</div>
-		                                	
+		                                	<?php
+// Verificar se as senhas foram enviadas
+if (isset($_POST['senha_user']) && isset($_POST['Csenha_user'])) {
+  $senha = $_POST['senha_user'];
+  $confirmar_senha = $_POST['Csenha_user'];
+
+  // Verificar se as senhas correspondem
+  if ($senha === $confirmar_senha) {
+    // As senhas correspondem, pode prosseguir com o processamento do formulário
+  } else {
+    // As senhas não correspondem, exibir uma mensagem de erro
+    echo "As senhas não correspondem!";
+  }
+}
+?>
+
 		                            	</div>
 		                            </div>
 		                            
