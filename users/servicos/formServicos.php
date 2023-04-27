@@ -139,9 +139,9 @@
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label"> Descrição </label>
-													<textarea rows="5" cols="50" class="form-control" name="descricao">Texto de exemplo: Preciso de alguém que possa ficar com meu cahchorro, Floquinho, nos dias 20/05 e 221/05
+													<textarea rows="5" cols="50" class="form-control" name="descricao">Texto de exemplo: Preciso de alguém que possa ficar com meu cachorro, Floquinho, nos dias 20/05 e 21/05
 													pois estarei viajando. 
-													Ele é um cão docil, muito ativo e brincaçhão.  </textarea>
+													Ele é um cão docil, muito ativo e brincalhão.  </textarea>
 		                                    	</div>
 		                                	</div>
                                             </div>
@@ -154,27 +154,29 @@
 		                                            <div class="choice" data-toggle="wizard-checkbox">
 		                                                <input type="checkbox" name="jobb" value="Design">
 		                                                <div class="icon">
-		                                                    <img src>
+		                                                    <i class="fas fa-cat"></i>
 		                                                </div>
-		                                                <h6>nome pet</h6>
+		                                                <h6>Meu pet 1</h6>
 		                                            </div>
 		                                        </div>
 		                                        <div class="col-sm-4">
 		                                            <div class="choice" data-toggle="wizard-checkbox">
 		                                                <input type="checkbox" name="jobb" value="Code">
 		                                                <div class="icon">
-		                                                    <i class="fas fa-hotel"></i>
+		                                                    <i class="fas fa-dog"></i>
 		                                                </div>
-		                                                <h6>nome pet</h6>
+		                                                <h6>Meu pet 2</h6>
 		                                            </div>
 		                                        </div>
 		                                        <div class="col-sm-4">
 		                                            <div class="choice" data-toggle="wizard-checkbox">
+												
 		                                                <input type="checkbox" name="jobb" value="Develop">
 		                                                <div class="icon">
-		                                                    <i class=" fas fa-dog"></i>
+		                                                    <i class="fas fa-plus"></i>
+															
 		                                                </div>
-		                                                <h6>nome pet</h6>
+														<a onclick="window.location.href='../pets/cadastroPet.php'" class="choice">Adicionar novo pet</a>
 		                                            </div>
 		                                        </div>
 		                                    </div>
