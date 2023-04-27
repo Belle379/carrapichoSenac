@@ -50,7 +50,7 @@
 		            <!-- Wizard container   -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="red" id="wizard">
-			                <form action="./cadastrarPet.php" method="POST">
+			                <form action="./cadastrarServicos.php" method="POST">
 			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
 		                    	<div class="wizard-header">
@@ -72,47 +72,76 @@
 		                                	<!--<div class="col-sm-12">
 		                                    	<h4 class="info-text"> Let's start with the basic details</h4>
 		                                	</div>-->
+
                                             <div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 												<label for="sexo"><h6>Tipo de profissinal:</h6></label><br>
-												<input type="radio" id="cuidador" name="TpProfissional" value="Cuidador">
+												<input type="radio" id="cuidador" name="TpProfissional" value="Cuidador" onclick="mostrarLista()">
 												<label for="cuidador">Cuidador</label><br>
 												<input type="radio" id="adestrador" name="TpProfissional" value="adestrador">
 												<label for="adestrador">Adestrador</label><br>			
-                                                <input type="radio" id="veterinario" name="TpProfissional" value="veterinario">
-												<label for="veterinario">Veterinário</label><br>									
-												</div>
-		                                	</div>
+                                                <input type="radio" id="veterinario" name="TpProfissional" value="veterinario"  onclick="mostrarLista()">
+												<label for="veterinario">Veterinário</label><br>
+													
+											
                                             <!--Se escolher cuidador, pode codigo em php-->
-                                            <div class="col-lg-4 col-sm-offset-1">
+                                            <div id="TpServicoC" style="display:none">
 		                                    	<div class="form-group label-floating">
-												<label for="sexo"><h6>Tipo de Serviço<h6></label><br>
-												<input type="radio" id="petSitter" name="TpServico" value="petSitter">
-												<label for="petSitter">Pet Sitter</label><br>
-												<input type="radio" id="passeador" name="TpServico" value="passeador">
+												<label  for="sexo"><h6>Tipo de Serviço<h6></label><br>
+												<input type="radio" id="petSitter" id="TpServicoC" name="TpServico" value="petSitter">
+												<label  for="petSitter">Pet Sitter</label><br>
+												<input type="radio" id="passeador" id="TpServicoC" name="TpServico" value="passeador">
 												<label for="passeador">Passeador</label><br>	
-                                                <input type="radio" id="hospedeiro" name="TpServico" value="hospedeiro">
+                                                <input type="radio" id="hospedeiro" id="TpServicoC" name="TpServico" value="hospedeiro">
 												<label for="hospedeiro">Anfitrião</label><br>									
 												</div>
 		                                	</div>
+											<script>
+  												document.querySelectorAll('input[name="TpProfissional"]').forEach((radio) => {
+   													 radio.addEventListener('change', () => {
+     													 if (radio.value === 'Cuidador') {
+      														  document.getElementById('TpServicoC').style.display = 'block';
+     														 } else {
+      															  document.getElementById('TpServicoC').style.display = 'none';
+    														  }
+ 														   });
+ 														 });
+											</script>
                                             <!--Se escolher veterinario, pode codigo em php-->
-                                            <div class="col-lg-4 col-sm-offset-1">
-		                                    	<div class="form-group label-floating">
+                                            <div  id="TpServicoV" style="display:none">
+		                                    	<div class="form-group label-floating" >
 												<label for="sexo"><h6>Tipo de Serviço<h6></label><br>
-												<input type="radio" id="exame" name="TpServico" value="exame">
+												<input type="radio" id="exame" id="TpServicoV" name="TpServico" value="exame">
 												<label for="exames">Exame</label><br>
-												<input type="radio" id="consulta" name="TpServico" value="consulta">
+												<input type="radio" id="consulta" id="TpServicoV" name="TpServico" value="consulta">
 												<label for="consulta">Consulta</label><br>	
-                                                <input type="radio" id="vacina" name="TpServico" value="vacina">
+                                                <input type="radio" id="vacina" id="TpServicoV" name="TpServico" value="vacina">
 												<label for="vacina">Vacina</label><br>	
-                                                <input type="radio" id="emergencia" name="TpServico" value="emergencia">
+                                                <input type="radio" id="emergencia" id="TpServicoV" name="TpServico" value="emergencia">
 												<label for="emergecia">Emergencia</label><br>								
 												</div>
 		                                	</div>
+											<script>
+  												document.querySelectorAll('input[name="TpProfissional"]').forEach((radio) => {
+   													 radio.addEventListener('change', () => {
+     													 if (radio.value === 'veterinario') {
+      														  document.getElementById('TpServicoV').style.display = 'block';
+     														 } else {
+      															  document.getElementById('TpServicoV').style.display = 'none';
+    														  }
+ 														   });
+ 														 });
+											</script>
+											</div>
+		                                	</div>
+										
+
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label"> Descrição </label>
-													<input type="text" class="form-control" name="descricao" id="descricao">
+													<textarea rows="5" cols="50" class="form-control" name="descricao">Texto de exemplo: Preciso de alguém que possa ficar com meu cahchorro, Floquinho, nos dias 20/05 e 221/05
+													pois estarei viajando. 
+													Ele é um cão docil, muito ativo e brincaçhão.  </textarea>
 		                                    	</div>
 		                                	</div>
                                             </div>
@@ -125,7 +154,7 @@
 		                                            <div class="choice" data-toggle="wizard-checkbox">
 		                                                <input type="checkbox" name="jobb" value="Design">
 		                                                <div class="icon">
-		                                                    <i class="fas fa-baby-carriage"></i>
+		                                                    <img src>
 		                                                </div>
 		                                                <h6>nome pet</h6>
 		                                            </div>

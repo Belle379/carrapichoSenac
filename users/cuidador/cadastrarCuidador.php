@@ -20,7 +20,8 @@ VALUES ('$petSitter','$hospedeiro','$passeador')";
 $result_servicoC = mysqli_query($conexao, $query_servicoC);
 
 if ($result_servicoC > 0) {
-    echo "<script>alert('Seus dados foram salvos !')</script>";
+    header('Location: ../index.php');
+    echo "<script>alert('Dados Salvos!!! <br> Clique em [ENTRAR] e faça seu log in')</script>";
 } else {
     echo "Deu erro:  <br>" . mysqli_error($conexao);
 }

@@ -8,29 +8,6 @@ include_once "../conexao.php"; //Incluir a conexao com BD
 //aparecer retorno de outros codigos ou intereferencia no resultado. 
 
 
-//.................................................Tabela Dados Basicos........................................................//
-
-// o $algumacoisa é criando uma variavel  e o $_POST["algumacoisa"] é puxando do dado inserido do formulario
-$CPF_veterinario = $_POST["CPF_veterinario"];
-$nome_veterinario = $_POST["nome_veterinario"];
-$fone_veterinario = $_POST["fone_veterinario"];
-$email_veterinario = $_POST["email_veterinario"];
-$senha_veterinario = $_POST["senha_veterinario"];
-$CRMV = $_POST["CRMV"];
-//$query_algumacoisa é uma variavel para inserir o camando do banco.
-//dbCuidador = dados basicos Cuidador 
-$query_dbveterinario = "INSERT INTO tb_veterinario ( CPF_veterinario, nome_veterinario, fone_veterinario,email_veterinario,senha_veterinario, CRMV) 
-VALUES ('$CPF_veterinario', '$nome_veterinario', '$fone_veterinario','$email_veterinario','$senha_veterinario', '$CRMV')";
-//$result_algumacoisa é outra variavel para conectar direcionar qual é o banco e qual é a tabela. 
-$result_dbveterinario = mysqli_query($conexao, $query_dbveterinario);
-
-//se ate o codigo acima der tudo certo, o resultado disso é 1 que é maior que zero, isso confirma que cadatrou. 
-
-if ($result_dbveterinario > 0) {
-    echo "<script>alert('Seus dados foram salvos !')</script>";//então irá aparecer a mensagem que foram salvos 
-} else {
-    echo "Deu erro:  <br>" . mysqli_error($conexao);//caso contrario irá informar o erro. 
-}
 
 //.................................................Tabela Serviço Cuidador.....................................................//
 $consulta=  (isset($_POST['consulta']) && !empty($_POST['consulta'])) ? 1 : 0;
@@ -49,26 +26,25 @@ if ($result_servicoVet > 0) {
     echo "Deu erro:  <br>" . mysqli_error($conexao);//caso contrario irá informar o erro. 
 }
 
+$nomeCurso = $_POST['nomeCurso'];
+$instituicao = $_POST['instituicao'];
+$dt_inicio = $_POST['dt_inicio'];
+$dt_termino = $_POST['dt_termino'];
+$certificado = $_POST['certificado'];
 
-//--------------------------- TABELA ENDEREÇO--------------------------//
+//servicoC = servico Cuidador 
+$query_cursoA = "INSERT INTO formacao (nomeCurso, instituicao, dt_inicio, dt_termino, certificado) 
+VALUES ('$nomeCurso','$instituicao','$dt_inicio','$dt_termino','$certificado')";
+$result_cursoA = mysqli_query($conexao, $query_cursoA);
 
-$cep = $_POST["cep"];
-$uf = $_POST["uf"];
-$cidade = $_POST["cidade"];
-$bairro = $_POST["bairro"];
-$endereco = $_POST["endereco"];
-$numero = $_POST["numero"];
+if ($result_cursoA > 0) {
+    header('Location: ../index.php');
+    echo "<script>alert('Dados Salvos!!! <br> Clique em [ENTRAR] e faça seu log in')</script>";
+} else {
+    echo "Deu erro:  <br>" . mysqli_error($conexao);
+}
 
 
-$query_endereco = "INSERT INTO tb_endereco (cep,uf,cidade,bairro,endereco,numero,complemento) 
-        VALUES ('$cep', '$uf','$cidade','$bairro','$endereco' ,'$numero')";
-$result_endereco = mysqli_query($conexao, $query_endereco);
-        
-if ($result_endereco > 0) {
-        echo "<script>alert('Seus dados foram salvos !')</script>";
-    } else {
-        echo "Deu erro:  <br>" . mysqli_error($conexao);
-    }
 
 
 mysqli_close($conexao);

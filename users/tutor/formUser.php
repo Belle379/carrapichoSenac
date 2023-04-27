@@ -246,8 +246,8 @@
 		                                <div class="row">
 		                                    <div class="col-sm-10 col-sm-offset-1">
 											<div class="col-sm-3">
-		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="This is good if you travel alone.">
-		                                                <input type="radio" name="tutor" value="tutor">
+		                                            <div class="choice" data-toggle="wizard-checkbox" rel="tooltip" title="This is good if you travel alone.">
+		                                                <input type="checkbox" name="tpuser" value="tutor">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-paw"></i>
 		                                                </div>
@@ -255,8 +255,8 @@
 		                                            </div>
 		                                        </div>
 		                                        <div class="col-sm-3">
-		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip">
-		                                                <input type="radio" name="cuidador" value="cuidador">
+		                                            <div class="choice" data-toggle="wizard-checkbox" rel="tooltip">
+		                                                <input type="checkbox" name="tpuser" value="cuidador">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-cat"></i>
 		                                                </div>
@@ -264,8 +264,8 @@
 		                                            </div>
 		                                        </div>
 		                                        <div class="col-sm-3">
-		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip">
-		                                                <input type="radio" name="adestrador" value="adestrador">
+		                                            <div class="choice" data-toggle="wizard-checkbox" rel="tooltip">
+		                                                <input type="checkbox" name="tpuser" value="adestrador">
 		                                                <div class="icon">
 		                                                    <i class=" fas fa-dog"></i>
 		                                                </div>
@@ -273,8 +273,8 @@
 		                                            </div>
 		                                        </div>
 												<div class="col-sm-3">
-		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip">
-		                                                <input type="radio" name="veterinario" value="veterinario">
+		                                            <div class="choice" data-toggle="wizard-checkbox" rel="tooltip">
+		                                                <input type="checkbox" name="tpuser" value="veterinario">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-stethoscope"></i>
 		                                                </div>

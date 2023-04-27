@@ -1,137 +1,163 @@
-<!DOCTYPE html>
-<html lang="pt-Br">
-
+<!doctype html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Material Bootstrap Wizard by Creative Tim</title>
 
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
 
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
 
-	<title> Cadastro Adestrador</title>
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'
+    type='text/css'>
+	<script src="https://kit.fontawesome.com/8c2ef3f346.js" crossorigin="anonymous"></script>
+	<!-- CSS Files -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/css/material-bootstrap-wizarde.css" rel="stylesheet" />
 
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link href="assets/css/demo.css" rel="stylesheet" />
 </head>
 
 <body>
-	<?php
-	if (isset($_SESSION['msg'])) {
-		echo $_SESSION['msg'];
-		unset($_SESSION['msg']);
-	}
-	?>
-	<h2> Cadastro Adestrador </h2>
-	<form action="./cadastrarAdestrador.php" method="POST">
 
-		<h3> Dados Pessoias </h3>
-
-		<label for="name">CPF</label>
-		<input type="text" name="CPF_adestrador" id="CPF_adestrador" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)"><br>
-		<script>
-	function formatar(mascara, documento){
-  var i = documento.value.length;
-  var saida = mascara.substring(0,1);
-  var texto = mascara.substring(i)
-
-  if (texto.substring(0,1) != saida){
-            documento.value += texto.substring(0,1);
-  }
-	}
-	</script>
-
-		<label for="name">Nome</label>
-		<input type="text" name="nome_adestrador" id="nome_adestrador" placeholder="Digite seu nome" required><br>
-
-		<label for="name">Nº de Telefone</label>
-		<input type="text" name="fone_adestrador" id="fone_adestrador" maxlength="15" OnKeyPress="formatar('## #####-####', this)"><br>
-		<script>
-			function formatar(mascara, documento){
-  var i = documento.value.length;
-  var saida = mascara.substring(0,1);
-  var texto = mascara.substring(i)
-
-  if (texto.substring(0,1) != saida){
-            documento.value += texto.substring(0,1);
-  }
-}
-		</script>
-
-		<label for="name">E-mail</label>
-		<input type="text" name="email_adestrador" id="email_adestrador" placeholder="nickname@provedor.com" required><br>
-
-		<label for="name">Senha</label>
-		<input type="text" name="senha_adestrador" id="senha_adestrador" placeholder="Crie uma senha" required><br>
-
-		<label for="name">Confirmar Senha</label>
-		<input type="text" name="nome" id="senha_adestrador" placeholder="Confirme a senha" required><br>
-		<input type="submit" value="Próximo" name="Cadastrar">
-
-
-		</div>
-		<br>
-
-		<h3> Serviços prestado</h3>
-
-		<h5>Quai tipo de animais poderá cuidar? </h5>
-
-		<input type="checkbox" name="cao" value="Cachorro">
-		<label for="cao">Cachorro</label>
-
-		<input type="checkbox" name="gato" value="Gato">
-		<label for="gato">Gatos</label>
-
-		<label>Outro</label>
-		<input type="text" name="outro" placeholder="Digite quais outros animais você poderá cuidar">
-
-		<input type="submit" value="Próximo" name="Cadastrar">
-
-		<h5> Qual(is) porte você poderá cuidar? </h5>
-
-		<input type="checkbox" name="pequeno" value="pequeno">
-		<label for="pequeno">Pequeno Porte </label>
-
-		<input type="checkbox" name="medio" value="medio">
-		<label for="medio">Médio Porte</label>
-
-		<input type="checkbox" name="grande" value="grande">
-		<label for="grande">Grande Porte</label>
-		<input type="submit" value="Próximo" name="Cadastrar">
-
-		<h2>formacao</h2>
-
-	<label for="curso">Curso:</label>
-	<input type="text" id="nomeCurso" name="nomeCurso" required><br>
-
-	<label for="instituicao">Instituição:</label>
-	<input type="text" id="instituicao" name="instituicao" required><br>
-
-	<label for="data_inicio">Data de Início:</label>
-	<input type="date" id="dt_inicio" name="dt_inicio" required><br>
-
-	<label for="data_termino">Data de Término:</label>
-	<input type="date" id="dt_termino" name="dt_termino" required><br>
-
-	<label for="certificado">certificado de término</label>
-	<input type="file" id="certificado" name="certificado">"
-	<input type="submit" value="Enviar">
-</form>
-
-		</div>
-		</div>
-		</div>
-		</div>
-
-		<!-- Endereço
- -->
+	<div class="image-container set-full-height" style="background-image: url('assets/img/gationho.jpg')">
+	 
 		
-		<!-- FOTOS
-<?php //if (msg != false) echo "<p> msg </p>";?>
-<form action="./guardarFotos.php" method="POST" enctype="multipart/form-data">
-<label> Enviar foto de perfil </label>
-<input type="file" required name="foto">
-<input type="submit" class="button" value="Enviar" >
-</form alt="Second slide">
-</div>-->
+
+		<!--  Made With Material Kit  
+		<a href="http://demos.creative-tim.com/material-kit/index.html?ref=material-bootstrap-wizard" class="made-with-mk">
+			<div class="brand">C</div>
+			<div class="made-with">Carra <strong>picho</strong></div>
+		</a>-->
+	    <!--   Big container  -->
+	    <div class="container">
+	        <div class="row">
+		        <div class="col-sm-8 col-sm-offset-2">
+		            <!-- Wizard container   -->
+		            <div class="wizard-container">
+		                <div class="card wizard-card" data-color="purple" id="wizard">
+								
+						<input type='button' class='btn btn_close btn-fill btn-inverse ' name='previous' value='X' onclick="window.location.href='../../index.php'" />
+						<div class="wizard-header">
+		                        	<h3 class="wizard-title">
+		                        		Dados adicionais para adestradores.
+		                        	</h3>
+				
+		                    	</div>
+						<form action="./cadastrarAdestrador.php" method="POST">
+			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
+		                    	
+								<div class="wizard-navigation">
+									<ul>
+			                            
+			                            <li><a href="#type" data-toggle="tab">Certificado</a></li>
+			                            
+			                        </ul>
+								</div>
+
+		                        <div class="tab-content">
+		                            
+		                         <div class="tab-pane" id="type">
+		                                <h4 class="info-text">  </h4>
+		                                <div class="row">
+											<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Curso</label>
+													<input type="text" class="form-control" name="nomeCurso" id="nomeCurso" >
+		                                    	</div>
+		                                	</div>
+
+											<div class="col-lg-4 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">instituicao</label>
+													<input type="text" class="form-control" name="instituicao" id="instituicao" >
+		                                    	</div>
+		                                	</div>
+
+											<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Data de Início</label>
+													<input type="date" class="form-control" name="dt_inicio" id="dt_inicio" >
+		                                    	</div>
+														</div>
+														<div class="col-sm-5 col-sm-offset-1">
+											<div class="form-group label-floating">
+		                                        	<label class="control-label">Data de Término</label>
+													<input type="date" class="form-control" name="dt_termino" id="dt_termino" >
+		                                    	</div>
+		                                	</div>
+											<div class="col-sm-5 col-sm-offset-1">
+											<div >
+		                                        	<label >Insira arquivo certificado</label>
+													<input type="file" name="certificado" id="certificado" >
+		                                    	</div>
+		                                	</div>
+
+												
+		                                </div>
+		                            </div>
+		                           
+
+		                             
+		                          <!--  <div class="tab-pane" id="description">
+		                                <div class="row">
+		                                    <h4 class="info-text"> Drop us a small description. </h4>
+		                                    <div class="col-sm-6 col-sm-offset-1">
+		                                        <div class="form-group label-floating">
+		                                            <label class="control-label">Place description</label>
+		                                            <textarea class="form-control" placeholder="" rows="9"></textarea>
+		                                        </div>
+		                                    </div>
+		                                    <div class="col-sm-4">
+		                                    	<div class="form-group label-floating">
+		                                            <label class="control-label">Example</label>
+		                                            <p class="description">"The place is really nice. We use it every sunday when we go fishing. It is so awesome."</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>-->
+		                        <div class="wizard-footer">
+	                            	<div class="pull-right">
+	                                    <input type='button' class='btn btn-next btn-fill btn-primary btn-wd' name='next' value='Próximo' />
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-primary btn-wd' name='cadastrar' value='Cadastrar' />
+	                                </div>
+	                                <div class="pull-left">
+	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />
+	                                </div>
+									
+		                            <div class="clearfix"></div>
+		                        </div>
+			                </form>
+		                </div>
+		            </div> <!-- wizard container -->
+		        </div>
+	        </div> <!-- row -->
+	    </div> <!--  big container -->
+
+	    <div class="footer">
+	        <div class="container text-center">
+	        </div>
+	    </div>
+	</div>
 
 </body>
+	<!--   Core JS Files   -->
+	<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
+
+	<!--  Plugin for the Wizard -->
+	<script src="assets/js/material-bootstrap-wizard.js"></script>
+
+	<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+	<script src="assets/js/jquery.validate.min.js"></script>
 
 </html>

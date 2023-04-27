@@ -56,15 +56,14 @@ if ($result_endereco > 0) {
 
 //.................................................Tabela Serviço Cuidador.....................................................//
 
-$tutor= (isset($_POST['tutor']) && !empty($_POST['tutor'])) ? 1 : 0;;
-$cuidador =  (isset($_POST['cuidador']) && !empty($_POST['cuidador'])) ? 1 : 0;;
+/*$tutor = (isset($_POST['tutor']) && !empty($_POST['tutor'])) ? 1 : 0;
+$cuidador =  (isset($_POST['cuidador']) && !empty($_POST['cuidador'])) ? 1 : 0;
 $adestrador = (isset($_POST['adestrador']) && !empty($_POST['adestrador'])) ? 1 : 0;
-$veterinario= (isset($_POST['veterinario']) && !empty($_POST['veterinario'])) ? 1 : 0;
-
+$veterinario= (isset($_POST['veterinario']) && !empty($_POST['veterinario'])) ? 1 : 0;*/
+$tpuser= $_POST ['tpuser'];
 
 //servicoC = servico Cuidador 
-$query_tpuser = "INSERT INTO tb_tpuser (tutor,cuidador,adestrador,veterinario) 
-VALUES ('$tutor','$cuidador','$adestrador','$veterinario')";
+$query_tpuser = "INSERT INTO tb_tpuser (tutor) VALUES ('$tpuser')";
 $result_tpuser = mysqli_query($conexao, $query_tpuser);
 
 if ($result_tpuser > 0) {
@@ -72,6 +71,26 @@ if ($result_tpuser > 0) {
 } else {
     echo "Deu erro:  <br>" . mysqli_error($conexao);
 }
+
+switch ($tpuser) {
+    case "tutor":
+        header('Location: ../index.php');
+        echo "<script>alert('Dados Salvos!!! <br> Clique em [ENTRAR] e faça seu log in')</script>";
+        break;
+    case "cuidador":
+        header("Location:../cuidador/formcuidador.php");
+        echo "<script>alert('Seus dados foram salvos !')</script>";
+        break;
+    case "adestrador":
+        header("Location:../adestrador/formadestrador.php");
+        echo "<script>alert('Seus dados foram salvos !')</script>";
+        break;
+    case "veterinário":
+        header("Location:../veterinario/formveterinario.php");
+        echo "<script>alert('Seus dados foram salvos !')</script>";
+        break;
+    }
+
 
 
 mysqli_close($conexao);

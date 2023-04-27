@@ -1,119 +1,137 @@
-<!DOCTYPE html>
-<html lang="pt-Br">
-
+<!doctype html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Material Bootstrap Wizard by Creative Tim</title>
 
-	<title> Cadastro Cuidador</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
 
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'
+    type='text/css'>
+	<script src="https://kit.fontawesome.com/8c2ef3f346.js" crossorigin="anonymous"></script>
+	<!-- CSS Files -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/css/material-bootstrap-wizarde.css" rel="stylesheet" />
+
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link href="assets/css/demo.css" rel="stylesheet" />
 </head>
 
 <body>
-	
-	<h2> Cadastro Cuidador </h2>
-	<form action="./cadastrarCuidador.php" method="POST">
-
-		<h3> Dados Pessoiasmm </h3>
-
-		<label for="name">CPF</label>
-		<input type="text"   name="CPF_cuidador" id="CPF_cuidador" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" placeholder="000.000.000-00"  required><br>
-		<script>
-		function formatar(mascara, documento){
-  			var i = documento.value.length;
- 		 	var saida = mascara.substring(0,1);
-  			var texto = mascara.substring(i)
-
-  		if (texto.substring(0,1) != saida){
-            documento.value += texto.substring(0,1);
- 			 }			
-		}
-		</script>
-
-		<label for="name">Nome</label>
-		<input type="text" name="nome_cuidador" id="nome_cuidador" placeholder="Digite seu nome" required><br>
-
-
-		<label for="name">Nº de Telefone</label>
-		<input type="text" name="fone_cuidador" id="fone_cuidador" maxlength="15" OnKeyPress="formatar('## #####-####', this)" placeholder="99 99999-9999" required><br>
-		<script>
-		function formatar(mascara, documento){
- 			var i = documento.value.length;
-  			var saida = mascara.substring(0,1);
-  			var texto = mascara.substring(i)
-
-  			if (texto.substring(0,1) != saida){
-            documento.value += texto.substring(0,1);
- 			 }
-			}
-		</script>
-
-		<label for="name">E-mail</label>
-		<input type="email" name="email_cuidador" id="email_cuidador" placeholder="nickname@provedor.com" required><br>
-	
-		<label for="name">Senha</label>
-		<input type="password" name="senha_cuidador" id="senha_cuidador" placeholder="Crie uma senha" required><br>
-
-		<label for="name">Confirmar Senha</label>
-		<input type="password" name="Csenha_cuidador" id="Csenha_cuidador" placeholder="Confirme a senha" required><br>
-		<input type="submit" value="Próximo" name="Cadastrar">
-
-		<script> $(document).ready(function() { $('.cpf-mask').mask('000.000.000-00', {reverse: true}); $('.phone-mask').mask('(00) 0000-0000'); }); </script>
-		</div>
-		<br>
-
-		<h3> Serviços prestado</h3>
-
-		<h5>Quai tipo de animais poderá cuidar? </h5>
-
-		<input type="checkbox" name="cao" value="Cachorro">
-		<label for="cao">Cachorro</label>
-
-		<input type="checkbox" name="gato" value="Gato">
-		<label for="gato">Gatos</label>
-
-		<label>Outro</label>
-		<input type="text" name="outro" placeholder="Digite quais outros animais você poderá cuidar">
-
-		<input type="submit" value="Próximo" name="Cadastrar">
-
-		<h5> Qual(is) porte você poderá cuidar? </h5>
-
-		<input type="checkbox" name="pequeno" value="pequeno">
-		<label for="pequeno">Pequeno Porte </label>
-
-		<input type="checkbox" name="medio" value="medio">
-		<label for="medio">Médio Porte</label>
-
-		<input type="checkbox" name="grande" value="grande">
-		<label for="grande">Grande Porte</label>
-		<input type="submit" value="Próximo" name="Cadastrar">
-
-		<h5>Quais serviços você pretente prestar?</h5>
-
-		<input type="checkbox" name="petSitter" id="petSitter" value="Pet Sitter">
-		<label for="PetSitter">Pet Sitter </label>
-
-		<input type="checkbox" name="hospedeiro" value="Hotelzinho">
-		<label for="hospedeiro">Hotelzinho</label>
-
-		<input type="checkbox" name="passeador" value="Passeia">
-		<label for="passeador">Passeador</label>
-
-		<input type="submit" value="Cadastrar" name="Cadastrar">
-		</div>
-		</div>
-
-		</div>
-		</div>
-
+	<div class="image-container set-full-height" style="background-image: url('assets/img/gationho.jpg')">
+	 
 		
-		 FOTOS
 
-</div>
+		<!--  Made With Material Kit  
+		<a href="http://demos.creative-tim.com/material-kit/index.html?ref=material-bootstrap-wizard" class="made-with-mk">
+			<div class="brand">C</div>
+			<div class="made-with">Carra <strong>picho</strong></div>
+		</a>-->
+	    <!--   Big container  -->
+	    <div class="container">
+	        <div class="row">
+		        <div class="col-sm-8 col-sm-offset-2">
+		            <!-- Wizard container   -->
+		            <div class="wizard-container">
+		                <div class="card wizard-card" data-color="green" id="wizard">
+								
+						<input type='button' class='btn btn_close btn-fill btn-inverse ' name='previous' value='X' onclick="window.location.href='../../index.php'" />
+			                <form action="./cadastrarCuidador.php" method="POST">
+			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
+
+		                    	<div class="wizard-header">
+		                        	<h3 class="wizard-title">
+		                        	Dados adicionais para cuidadores.
+		                        	</h3>
+									
+		                    	</div>
+								<div class="wizard-navigation">
+									<ul>
+			                            
+			                            <li><a href="#type" data-toggle="tab">Serviços</a></li>
+			                         
+			                        </ul>
+								</div>
+
+		                        <div class="tab-content">
+		                            <div class="tab-pane" id="type">
+		                                <h4 class="info-text">  Infome quais serviços você irá prestar: </h4>
+		                                <div class="row">
+		                                    <div class="col-sm-10 col-sm-offset-1">
+		                                        <div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-checkbox">
+		                                                <input type="checkbox" name="petSitter" value="petSitter">
+		                                                <div class="icon">
+		                                                    <i class="fas fa-baby-carriage"></i>
+		                                                </div>
+		                                                <h6>Pet Sitter</h6>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-checkbox">
+		                                                <input type="checkbox" name="hospedeiro" value="hopedeiro">
+		                                                <div class="icon">
+		                                                    <i class="fas fa-hotel"></i>
+		                                                </div>
+		                                                <h6>Hospedeiro</h6>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-checkbox">
+		                                                <input type="checkbox" name="passeador" value="passeador">
+		                                                <div class="icon">
+		                                                    <i class=" fas fa-dog"></i>
+		                                                </div>
+		                                                <h6>Pessaeador</h6>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                                </div>
+		                            
+		                   
+		                        <div class="wizard-footer" >
+	                            	<div class="pull-right">
+	                                    <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Próximo' />
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-success  btn-wd' name='cadastrar' value='Cadastrar' />
+	                                </div>
+	                                <div class="pull-left">
+	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Voltar' />
+	                                </div>
+		                            <div class="clearfix"></div>
+		                        </div>
+			                </form>
+		                </div>
+						</div>
+		            </div> <!-- wizard container -->
+		        </div>
+	        </div> <!-- row -->
+	    </div> <!--  big container -->
+
+	    <div class="footer">
+	        <div class="container text-center">
+	        </div>
+	    </div>
+	</div>
 
 </body>
+	<!--   Core JS Files   -->
+	<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
+
+	<!--  Plugin for the Wizard -->
+	<script src="assets/js/material-bootstrap-wizard.js"></script>
+
+	<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+	<script src="assets/js/jquery.validate.min.js"></script>
 
 </html>
