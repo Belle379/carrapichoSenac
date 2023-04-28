@@ -62,7 +62,7 @@
 								<div class="wizard-navigation">
 									<ul>
 			                            <li><a href="#location" data-toggle="tab">Solicitar serviço</a></li>
-										<li><a href="#type" data-toggle="tab">Escolher pet</a></li>
+									
 			                        </ul>
 								</div>
 
@@ -146,42 +146,7 @@
 		                                	</div>
                                             </div>
 		                                	</div> 
-                                            <div class="tab-pane" id="type">
-		                                <h4 class="info-text"> Escolha o(s) pet(s) que precisam desse serviço </h4>
-		                                <div class="row">
-		                                    <div class="col-sm-10 col-sm-offset-1">
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Design">
-		                                                <div class="icon">
-		                                                    <i class="fas fa-cat"></i>
-		                                                </div>
-		                                                <h6>Meu pet 1</h6>
-		                                            </div>
-		                                        </div>
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Code">
-		                                                <div class="icon">
-		                                                    <i class="fas fa-dog"></i>
-		                                                </div>
-		                                                <h6>Meu pet 2</h6>
-		                                            </div>
-		                                        </div>
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-												
-		                                                <input type="checkbox" name="jobb" value="Develop">
-		                                                <div class="icon">
-		                                                    <i class="fas fa-plus"></i>
-															
-		                                                </div>
-														<a onclick="window.location.href='../pets/cadastroPet.php'" class="choice">Adicionar novo pet</a>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </div>
-		                            </div>
+                                           
 								
 								
 		                          <!--  <div class="tab-pane" id="description">
