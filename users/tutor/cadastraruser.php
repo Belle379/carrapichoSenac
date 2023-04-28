@@ -74,7 +74,7 @@ if ($result_tpuser > 0) {
 
 switch ($tpuser) {
     case "tutor":
-        header("Location:../index.php");
+        header("Location:../feed.php");
         echo "<script>alert('Dados Salvos!!! <br> Clique em [ENTRAR] e faça seu log in')</script>";
         break;
     case "cuidador":

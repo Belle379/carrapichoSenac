@@ -27,7 +27,6 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/stylleee.css" rel="stylesheet">
 </head>
-ca
 <body>
    
     <!-- Navbar Start -->
