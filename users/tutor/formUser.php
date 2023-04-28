@@ -262,7 +262,7 @@ if (isset($_POST['senha_user']) && isset($_POST['Csenha_user'])) {
 		                                    <div class="col-sm-10 col-sm-offset-1">
 											<div class="col-sm-3">
 		                                            <div class="choice" data-toggle="wizard-checkbox" rel="tooltip" title="This is good if you travel alone.">
-		                                                <input type="checkbox" name="tpuser" value="tutor">
+		                                                <input type="checkbox" name="tp_user" value="tutor">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-paw"></i>
 		                                                </div>
@@ -271,7 +271,7 @@ if (isset($_POST['senha_user']) && isset($_POST['Csenha_user'])) {
 		                                        </div>
 		                                        <div class="col-sm-3">
 		                                            <div class="choice" data-toggle="wizard-checkbox" rel="tooltip">
-		                                                <input type="checkbox" name="tpuser" value="cuidador">
+		                                                <input type="checkbox" name="tp_user" value="cuidador">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-cat"></i>
 		                                                </div>
@@ -280,7 +280,7 @@ if (isset($_POST['senha_user']) && isset($_POST['Csenha_user'])) {
 		                                        </div>
 		                                        <div class="col-sm-3">
 		                                            <div class="choice" data-toggle="wizard-checkbox" rel="tooltip">
-		                                                <input type="checkbox" name="tpuser" value="adestrador">
+		                                                <input type="checkbox" name="tp_user" value="adestrador">
 		                                                <div class="icon">
 		                                                    <i class=" fas fa-dog"></i>
 		                                                </div>
@@ -289,7 +289,7 @@ if (isset($_POST['senha_user']) && isset($_POST['Csenha_user'])) {
 		                                        </div>
 												<div class="col-sm-3">
 		                                            <div class="choice" data-toggle="wizard-checkbox" rel="tooltip">
-		                                                <input type="checkbox" name="tpuser" value="veterinario">
+		                                                <input type="checkbox" name="tp_user" value="veterinario">
 		                                                <div class="icon">
 		                                                    <i class="fas fa-stethoscope"></i>
 		                                                </div>

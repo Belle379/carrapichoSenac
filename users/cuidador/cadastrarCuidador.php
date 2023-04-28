@@ -20,7 +20,7 @@ VALUES ('$petSitter','$hospedeiro','$passeador')";
 $result_servicoC = mysqli_query($conexao, $query_servicoC);
 
 if ($result_servicoC > 0) {
-    header("Location:../feed.html");
+    header("Location:/./ILSN/carrapichoSenac/carrapichoSenac/index.php");
     echo "<script>alert('Dados Salvos!!! <br> Clique em [ENTRAR] e faça seu log in')</script>";
 } else {
     echo "Deu erro:  <br>" . mysqli_error($conexao);

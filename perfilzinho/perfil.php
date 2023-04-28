@@ -4,7 +4,7 @@ include "conexao.php";
 
 session_start();
 $id_user = $_SESSION['id_user'];
- $query = "SELECT * FROM tb_user WHERE id_user = '$id_user'";
+ $query = "SELECT * FROM tb_user, tb_tpuser WHERE id_user = '$id_user' and id_tpuser = '$id_tpuser'";
                 $result = mysqli_query($conexao, $query);
                 $bd_arr = mysqli_fetch_array($result);
 

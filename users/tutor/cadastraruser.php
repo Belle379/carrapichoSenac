@@ -60,7 +60,7 @@ if ($result_endereco > 0) {
 $cuidador =  (isset($_POST['cuidador']) && !empty($_POST['cuidador'])) ? 1 : 0;
 $adestrador = (isset($_POST['adestrador']) && !empty($_POST['adestrador'])) ? 1 : 0;
 $veterinario= (isset($_POST['veterinario']) && !empty($_POST['veterinario'])) ? 1 : 0;*/
-$tpuser= $_POST ['tpuser'];
+$tpuser= $_POST ["tp_user"];
 
 //servicoC = servico Cuidador 
 $query_tpuser = "INSERT INTO tb_tpuser (tutor) VALUES ('$tpuser')";
@@ -74,7 +74,7 @@ if ($result_tpuser > 0) {
 
 switch ($tpuser) {
     case "tutor":
-        header("Location:../feed.php");
+        header("Location:/./ILSN/carrapichoSenac/carrapichoSenac/index.php");
         echo "<script>alert('Dados Salvos!!! <br> Clique em [ENTRAR] e faça seu log in')</script>";
         break;
     case "cuidador":

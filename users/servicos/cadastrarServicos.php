@@ -25,7 +25,7 @@ $result_dbservico = mysqli_query($conexao, $query_dbservico);
 //se ate o codigo acima der tudo certo, o resultado disso é 1 que é maior que zero, isso confirma que cadatrou. 
 
 if ($result_dbservico > 0) {
-    echo "<script>alert('Seus dados foram salvos !')</script>";//então irá aparecer a mensagem que foram salvos 
+    header("Location:/./ILSN/carrapichoSenac/carrapichoSenac/feed.html");//então irá aparecer a mensagem que foram salvos 
 } else {
     echo "Deu erro:  <br>" . mysqli_error($conexao);//caso contrario irá informar o erro. 
 }
