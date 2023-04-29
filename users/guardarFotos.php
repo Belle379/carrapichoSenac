@@ -11,7 +11,7 @@ if(isset ($_FILES['foto'])){
     move_uploaded_file($Imagem['tmp_name'], $ImagemDiretorio . '/' . $ImagemNome);
     $ImagemFinal = "$ImagemDiretorio/$ImagemNome";
 
-    $sql_code = "INSERT INTO foto (foto, data_cadastro) VALUES ('$ImagemFinal', NOW())";
+    $sql_code = "INSERT INTO foto (imagem, data_cadastro) VALUES ('$ImagemFinal', NOW())";
 
     mysqli_query($conexao, $sql_code);
 

@@ -1,10 +1,8 @@
 <?php
 session_start();
-include "perfilzinho/conexao.php";
-$apresentar = "SELECT * FROM tb_servicos";
-$resultado = mysqli_query($conexao, $apresentar);
-while($dados = mysqli_fetch_assoc($resultado)) {
+include "perfilzinho/conexao.php"; 
 ?>
+
 <!DOCTYPE html>
 <html lang="Pt-br">
 
@@ -14,7 +12,7 @@ while($dados = mysqli_fetch_assoc($resultado)) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/feed2.css" rel="stylesheet">
   <link href="css/feed8.css" rel="stylesheet">
-  <link href="css/carouselll.css" rel="stylesheet">
+  <link href="css/carousel.css" rel="stylesheet">
   <link href="css/flickity.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
@@ -26,7 +24,7 @@ while($dados = mysqli_fetch_assoc($resultado)) {
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
   <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'
     type='text/css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Figtree:wght@300;600&amp;display=swap'><link rel="stylesheet" href="css/feedcard.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Bebas+Neue&ampfamily=Figtree:wght@300;600&ampdisplay=swap'><link rel="stylesheet" href="css/feedcard.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"> </script>
   <title> F E E D</title>
 </head>
@@ -81,78 +79,11 @@ while($dados = mysqli_fetch_assoc($resultado)) {
       <h5 id="t">O que você deseja?</h5>
       <input type="text" placeholder="Procurar                       &#xF002;  " value="" tabindex="1"
         autocomplete="off">
-      <div id="fil">
-        <h6><i class="fas fa-filter filtro"></i> Filtros</h6>
-      </div>
-      <div class="filtros">
-
-        <div class="filtrados">
-          <h5>Cuidador</h5>
-          <div>
-            <input class="form-check-input filt" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Passeio
-            </label>
-          </div>
-          <div>
-            <input class="form-check-input filt" type="checkbox" value="" id="flexCheckChecked">
-            <label class="form-check-label" for="flexCheckChecked">
-              Hotel
-            </label>
-          </div>
-          <div>
-            <input class="form-check-input filt" type="checkbox" value="" id="flexCheckChecked">
-            <label class="form-check-label" for="flexCheckChecked">
-              Pet Sitter
-            </label>
-            <hr class="linha">
-            <h5>Adestrador</h5>
-            <div>
-              <input class="form-check-input filt" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Passeio
-              </label>
-            </div>
-            <div>
-              <input class="form-check-input filt" type="checkbox" value="" id="flexCheckChecked">
-              <label class="form-check-label" for="flexCheckChecked">
-                Hotel
-              </label>
-            </div>
-            <div>
-              <input class="form-check-input filt" type="checkbox" value="" id="flexCheckChecked">
-              <label class="form-check-label" for="flexCheckChecked">
-                Pet Sitter
-              </label>
-            </div>
-            <hr class="linha">
-            <h5>Veterinário</h5>
-            <div>
-              <input class="form-check-input filt" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Passeio
-              </label>
-            </div>
-            <div>
-              <input class="form-check-input filt" type="checkbox" value="" id="flexCheckChecked">
-              <label class="form-check-label" for="flexCheckChecked">
-                Hotel
-              </label>
-            </div>
-            <div>
-              <input class="form-check-input filt" type="checkbox" value="" id="flexCheckChecked">
-              <label class="form-check-label" for="flexCheckChecked">
-                Pet Sitter
-              </label>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
+      <img src="" alt="" />
     </div>
     <!--Fim do side bar -->
+
+
     <!--Inicio do MA -->
     <div class="MA">
 
@@ -162,24 +93,35 @@ while($dados = mysqli_fetch_assoc($resultado)) {
   data-flickity-options='{ "wrapAround": true }'>
   <!--fim config carroseul-->
   <!--card-->
+  <?php 
+        
+
+        $apresentar = "SELECT * FROM tb_servicos , foto";
+        $resultado = mysqli_query($conexao, $apresentar);
+        $colunas = mysqli_fetch_assoc($resultado); 
+
+        if($colunas) {
+          do{  
+        ?>
+        <td>
   <div class="gallery-cell">
     <section class="articles">
     <article>
       <div class="article-wrapper">
         <figure>
-          <img src="img/gationho.jpg" alt="" />
+        <img src="<?php echo $colunas['imagem']; ?>">
         </figure>
         <div class="article-body">
-          <h2><?php echo $dados['tpProfissional'] ?></h2>
-          <h4><?php echo $dados['tpServico'] ?></h4>
+
+    
+          <h2><?php echo $colunas['tpProfissional'] ?></h2>
+          <h4><?php echo $colunas['tpServico'] ?></h4>
           <div class="desccard">
-          <p>
-          <?php echo $dados['descricao'] ?>
-          </p>
+          <p><?php echo $colunas['descricao'] ?></p>
+          </td>
           </div>
-          <?php   }  
-             ?>
-             
+          
+         
           <a href="#" class="read-more">
           <div class="footercard">
             Entre em contato <span class="sr-only"></span>
@@ -193,8 +135,13 @@ while($dados = mysqli_fetch_assoc($resultado)) {
         </div>
       </div>
     </div>
+    <?php }while($colunas = mysqli_fetch_assoc($resultado)) ?>
+            <?php
+          } ?>
 <!--fim card-->
- <!--card-->
+ 
+
+ <!--card
  <div class="gallery-cell">
   <section class="articles">
   <article>
@@ -203,13 +150,12 @@ while($dados = mysqli_fetch_assoc($resultado)) {
         <img src="img/cachorrinho.jpg" alt="" />
       </figure>
       <div class="article-body">
-      <h2>Serviços 2</h2>
-          <h4>petSitter</h4>
+      <h2><?php //echo $dados['tpProfissional'] ?></h2>
+          <h4><?php //echo $dados['tpServico'] ?></h4>
         <div class="desccard">
-        <p>
-          Cu    Curabitur convallis ac quam vitaaa laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam matti    Curabitur convallis ac quam vitaaa laoreet.    Curabitur convallis ac quam vitaaa laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam matti Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattirabitur convallis ac quam vitaaa laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-        </p>
+        <p><?php //echo $dados['descricao'] ?></p>
 </div>
+
         <a href="#" class="read-more">
         <div class="footercard">
           Entre em contato <span class="sr-only">about this is some title</span>
@@ -221,63 +167,7 @@ while($dados = mysqli_fetch_assoc($resultado)) {
       </div>
     </div>
   </div>
-<!--fim card-->
- <!--card-->
- <div class="gallery-cell">
-  <section class="articles">
-  <article>
-    <div class="article-wrapper">
-      <figure>
-        <img src="img/cachorrinho.jpg" alt="" />
-      </figure>
-      <div class="article-body">
-      <h2>Serviços 2</h2>
-          <h4>petSitter</h4>
-        <div class="desccard">
-        <p>
-          Cu    Curabitur convallis ac quam vitaaa laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam matti    Curabitur convallis ac quam vitaaa laoreet.    Curabitur convallis ac quam vitaaa laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam matti Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattirabitur convallis ac quam vitaaa laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-        </p>
-</div>
-        <a href="#" class="read-more">
-        <div class="footercard">
-          Entre em contato <span class="sr-only">about this is some title</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-<!--fim card-->
- <!--card-->
- <div class="gallery-cell">
-  <section class="articles">
-  <article>
-    <div class="article-wrapper">
-      <figure>
-        <img src="img/cachorrinho.jpg" alt="" />
-      </figure>
-      <div class="article-body">
-      <h2>Serviços 2</h2>
-          <h4>petSitter</h4>
-        <div class="desccard">
-        <p>
-          Cu    Curabitur convallis ac quam vitaaa laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam matti    Curabitur convallis ac quam vitaaa laoreet.    Curabitur convallis ac quam vitaaa laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam matti Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattirabitur convallis ac quam vitaaa laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-        </p>
-</div>
-        <a href="#" class="read-more">
-        <div class="footercard">
-          Entre em contato <span class="sr-only">about this is some title</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-<!--fim card-->
+fim card-->
 
 
 </div>
