@@ -100,19 +100,7 @@
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Número de Celular</label>
 
-													<input type="text" class="form-control" name="fone_user" id="fone_user" maxlength="15" OnKeyPress="formatar('## #####-####', this)">
-
-		                                    		<script>
-														function formatar(mascara, documento){
-															 var i = documento.value.length;
-															  var saida = mascara.substring(0,1);
-															  var texto = mascara.substring(i)
-												
-															  if (texto.substring(0,1) != saida){
-															documento.value += texto.substring(0,1);
-															  }
-															}
-														</script>
+													<input type="number" class="form-control" name="fone_user" id="fone_user" maxlength="15" >
 												
 												</div>
 		                                	</div>

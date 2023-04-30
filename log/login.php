@@ -23,7 +23,7 @@ if($row > 0){
 	mysqli_close($conexao);
 	
 	if($bd_arr['senha_user'] == $senha){	
-		header("Location: /./ILSN/carrapichoSenac/carrapichoSenac/feed.php");
+		header("Location: /./carrapichoSenac/feed.php");
 		
 		
 		$_SESSION['nome_user'] = $bd_arr['nome_user'];
