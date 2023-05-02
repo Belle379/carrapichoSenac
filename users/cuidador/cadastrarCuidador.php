@@ -9,13 +9,13 @@ include_once "../conexao.php"; //Incluir a conexao com BD
 
 
 //.................................................Tabela Serviço Cuidador.....................................................//
-
+$id_user = mysqli_insert_id($conexao);
 $petSitter = (isset($_POST['petSitter']) && !empty($_POST['petSitter'])) ? 1 : 0;
 $hospedeiro = (isset($_POST['hospedeiro']) && !empty($_POST['hospedeiro'])) ? 1 : 0;
 $passeador = (isset($_POST['passeador']) && !empty($_POST['passeador'])) ? 1 : 0;
 
 //servicoC = servico Cuidador 
-$query_servicoC = "INSERT INTO tb_servicocuidador (petSitter, hospedeiro, passeador) 
+$query_servicoC = "INSERT INTO tb_servicocuidador ( petSitter, hospedeiro, passeador) 
 VALUES ('$petSitter','$hospedeiro','$passeador')";
 $result_servicoC = mysqli_query($conexao, $query_servicoC);
 

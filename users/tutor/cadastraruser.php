@@ -8,29 +8,6 @@ include_once "../conexao.php"; //Incluir a conexao com BD
 //aparecer retorno de outros codigos ou intereferencia no resultado. 
 
 
-//.................................................Tabela Dados Basicos........................................................//
-
-// o $algumacoisa é criando uma variavel  e o $_POST["algumacoisa"] é puxando do dado inserido do formulario
-$CPF_user = $_POST["CPF_user"];
-$nome_user = $_POST["nome_user"];
-$fone_user = $_POST["fone_user"];
-$email_user = $_POST["email_user"];
-$senha_user = md5($_POST["senha_user"]);
-
-//$query_algumacoisa é uma variavel para inserir o camando do banco.
-//dbuser = dados basicos user 
-$query_dbuser = "INSERT INTO tb_user ( CPF_user, nome_user,fone_user,email_user,senha_user) 
-VALUES ('$CPF_user', '$nome_user','$fone_user','$email_user','$senha_user')";
-//$result_algumacoisa é outra variavel para conectar direcionar qual é o banco e qual é a tabela. 
-$result_dbuser = mysqli_query($conexao, $query_dbuser);
-
-//se ate o codigo acima der tudo certo, o resultado disso é 1 que é maior que zero, isso confirma que cadatrou. 
-
-if ($result_dbuser > 0) {
-    echo "<script>alert('Seus dados foram salvos !')</script>";//então irá aparecer a mensagem que foram salvos 
-} else {
-    echo "Deu erro:  <br>" . mysqli_error($conexao);//caso contrario irá informar o erro. 
-}
 
 
 //.................................................Tabela Endereço.....................................................//
@@ -52,22 +29,29 @@ if ($result_endereco > 0) {
     } else {
         echo "Deu erro:  <br>" . mysqli_error($conexao);
     }    
+//.................................................Tabela cpf em outra tabela........................................................//
 
+//.................................................Tabela Dados Basicos........................................................//
 
-//.................................................Tabela Serviço Cuidador.....................................................//
+// o $algumacoisa é criando uma variavel  e o $_POST["algumacoisa"] é puxando do dado inserido do formulario
+$CPF_user = $_POST["CPF_user"];
+$nome_user = $_POST["nome_user"];
+$fone_user = $_POST["fone_user"];
+$email_user = $_POST["email_user"];
+$senha_user = md5($_POST["senha_user"]);
+$tpuser = $_POST ["tpuser"];
 
-/*$tutor = (isset($_POST['tutor']) && !empty($_POST['tutor'])) ? 1 : 0;
-$cuidador =  (isset($_POST['cuidador']) && !empty($_POST['cuidador'])) ? 1 : 0;
-$adestrador = (isset($_POST['adestrador']) && !empty($_POST['adestrador'])) ? 1 : 0;
-$veterinario= (isset($_POST['veterinario']) && !empty($_POST['veterinario'])) ? 1 : 0;*/
-$tpuser= $_POST ["tp_user"];
+//$query_algumacoisa é uma variavel para inserir o camando do banco.
+//dbuser = dados basicos user 
+$query_dbuser = "INSERT INTO tb_user ( CPF_user, nome_user,fone_user,email_user,senha_user,tpuser) 
+VALUES ('$CPF_user', '$nome_user','$fone_user','$email_user','$senha_user','$tpuser')";
+//$result_algumacoisa é outra variavel para conectar direcionar qual é o banco e qual é a tabela. 
+$result_dbuser = mysqli_query($conexao, $query_dbuser);
 
-//servicoC = servico Cuidador 
-$query_tpuser = "INSERT INTO tb_tpuser (tutor) VALUES ('$tpuser')";
-$result_tpuser = mysqli_query($conexao, $query_tpuser);
+//se ate o codigo acima der tudo certo, o resultado disso é 1 que é maior que zero, isso confirma que cadatrou. 
 
-if ($result_tpuser > 0) {
-    echo "<script>alert('Seus dados foram salvos !')</script>";
+if ($result_dbuser > 0) {
+    echo "<script>alert('Seus dados foram salvos !')</script>";//então irá aparecer a mensagem que foram salvos 
 } else {
     echo "Deu erro:  <br>" . mysqli_error($conexao);
 }

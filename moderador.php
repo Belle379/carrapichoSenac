@@ -1,13 +1,6 @@
 <?php
 session_start();
 include "perfilzinho/conexao.php";
-
-
-$apresentar = "SELECT nome_user, fone_user, tpuser, uf, bairro, 
-petSitter, hospedeiro, passeador, vacina, exame, consulta, emergencia, plantao
-FROM  tb_user, tb_endereco, tb_servicocuidador, tb_servicovet";
-$resultado = mysqli_query($conexao, $apresentar);
-$colunas = mysqli_fetch_array($resultado);
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +28,7 @@ $colunas = mysqli_fetch_array($resultado);
     href='https://fonts.googleapis.com/css2?family=Bebas+Neue&ampfamily=Figtree:wght@300;600&ampdisplay=swap'>
   <link rel="stylesheet" href="css/feedcard.css">
   <script src="flickty.js"></script>
-  <title> F E E D</title>
+  <title> Moderador </title>
 </head>
 
 <body>
@@ -54,22 +47,16 @@ $colunas = mysqli_fetch_array($resultado);
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="users/servicos/formServicos.php"> Olá <?php echo $colunas['nome_user'] ?></a>
-          </li>
-          
+      
           
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            <a class="nav-link " href="sair.php" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              Menu
+            SAIR
             </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="users/alterar/alterardador.php">Alterar Dados</a></li>
-              <li><a class="dropdown-item" href="sair.php">Sair</a></li>
-            </ul>
+
           </li>
         </ul>
       </div>
@@ -86,12 +73,19 @@ $colunas = mysqli_fetch_array($resultado);
     <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
       <!--fim config carroseul-->
       <!--card-->
-      <?php        
+      <?php
+
+
+      $apresentar = "SELECT id_user, nome_user, fone_user, tpuser, uf, bairro, 
+      petSitter, hospedeiro, passeador, vacina, exame, consulta, emergencia, plantao
+      FROM  tb_user, tb_endereco, tb_servicocuidador, tb_servicovet";
+      $resultado = mysqli_query($conexao, $apresentar);
+      $colunas = mysqli_fetch_array($resultado);
+
       if ($colunas) {
         do {
           ?>
      
-          <td>
             <div class="gallery-cell">
               <section class="articles">
                 <article>
@@ -136,8 +130,8 @@ $colunas = mysqli_fetch_array($resultado);
 
 
         
-          <div class="footercard"> <a href="#" class="read-more"> <a class="whatsapp-link" href="https://wa.me/<?php echo $colunas['fone_user'] ?>" target="_blank">
-            Falar com <?php echo $colunas['nome_user'] ?> <span class="sr-only" ></span>
+          <div class="footercard"> <a href="Excluiruser.php?p=excluir&user=<?php echo $colunas['id_user'];?>" class="read-more">
+            Banir <?php echo $colunas['nome_user'] ?> <span class="sr-only" ></span>
             
             <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" 
@@ -145,6 +139,7 @@ $colunas = mysqli_fetch_array($resultado);
                 clip-rule="evenodd" />
             </svg>
           </div>
+
         </a>
                         </div>
       </div>
@@ -156,43 +151,11 @@ $colunas = mysqli_fetch_array($resultado);
         
       }
        ?>
-  <!--fim card-->
-
-
-  <!--card
- <div class="gallery-cell">
-  <section class="articles">
-  <article>
-    <div class="article-wrapper">
-      <figure>
-        <img src="img/cachorrinho.jpg" alt="" />
-      </figure>
-      <div class="article-body">
-      <h2><?php //echo $dados['tpProfissional'] ?></h2>
-          <h4><?php //echo $dados['tpServico'] ?></h4>
-        <div class="desccard">
-        <p><?php //echo $dados['descricao'] ?></p>
-</div>
-
-        <a href="#" class="read-more">
-        <div class="footercard">
-          Entre em contato <span class="sr-only">about this is some title</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-fim card-->
-
-
+       
+    
   </div>
   </div>
 
-
-  <!--fim do MA-->
 
 </body>
 

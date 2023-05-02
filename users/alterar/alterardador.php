@@ -1,9 +1,21 @@
+<?php
+session_start();
+include "../conexao.php";
+
+
+$id_user = $_SESSION['id_user'];
+
+$query = "SELECT  fone_user, email_user, senha_user, cep, uf, cidade, bairro, endereco, numero FROM tb_user, tb_endereco";
+$result = mysqli_query($conexao, $query);
+$bd_arr = mysqli_fetch_array($result);
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Material Bootstrap Wizard by Creative Tim</title>
+	<title>Atualizar Dados</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -44,17 +56,17 @@
 						
 	                  <input type='button' class='btn btn_close btn-fill btn-inverse ' name='previous' value='X' onclick="window.location.href='../../index.php'" />
 	                               
-						<form action="./cadastraruser.php" method="POST">
+						<form action="alterar.php" method="POST">
 			                <!-- You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
 		                    	<div class="wizard-header">
 		                        	<h3 class="wizard-title">
 
 
-		                        		Cadastre-se!
+		                        		Atualize seus dados! 
 
 		                        	</h3>
-									<h5> Estas informaçãoes irão nos permitir saber mais sobre você.</h5>
+								
 		                    	</div>
 								<div class="wizard-navigation">
 									<ul>
@@ -70,37 +82,12 @@
 		                                	<!--<div class="col-sm-12">
 		                                    	<h4 class="info-text"> Let's start with the basic details</h4>
 		                                	</div>-->
-											<div class="col-lg-4 col-sm-offset-1">
-		                                    	<div class="form-group label-floating">
-		                                        	<label class="control-label">Nome</label>
-													<input type="text" class="form-control" name="nome_user" id="nome_user" >
-
-		                                    	</div>
-		                                	</div>
-		                                	<div class="col-sm-5 col-sm-offset-1">
-		                                    	<div class="form-group label-floating">
-		                                        	<label class="control-label">CPF</label>
-													<input type="text" class="form-control" name="CPF_user" id="CPF_user" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
-
-
-													<script>
-														function formatar(mascara, documento){
-															  var i = documento.value.length;
-															  var saida = mascara.substring(0,1);
-															  var texto = mascara.substring(i)
-												
-														  if (texto.substring(0,1) != saida){
-															documento.value += texto.substring(0,1);
-															  }			
-														}
-														</script>
-												</div>
-		                                	</div>
+						
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Número de Celular</label>
 
-													<input type="number" class="form-control" name="fone_user" id="fone_user" maxlength="12" placeholder="ddd000000000">
+													<input type="number" class="form-control" name="fone_user" id="fone_user" value= <?php echo $bd_arr['fone_user'] ?>>
 												
 												</div>
 		                                	</div>
@@ -108,21 +95,21 @@
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Email</label>
 
-													<input type="email" class="form-control" name="email_user" id="email_user" >
+													<input type="email" class="form-control" name="email_user" id="email_user" value= <?php echo $bd_arr['email_user'] ?> >
 
 		                                    	</div>
 		                                	</div>
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
-		                                        	<label class="control-label">Senha </label>
+		                                        	<label class="control-label">Nova Senha </label>
 
-													<input type="password" class="form-control" name="senha_user" id="senha_user" >
+													<input type="password" class="form-control" name="senha_user" id="senha_user"  value= <?php echo $bd_arr['senha_user'] ?> >
 
 		                                    	</div>
 		                                	</div>
 											<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
-		                                        	<label class="control-label">Confirmar Senha</label>
+		                                        	<label class="control-label">Confirmar Nova Senha</label>
 													<input type="password" class="form-control" name="Csenha_user" id="Csenha_user"  >
 
 		                                    	</div>
@@ -141,6 +128,7 @@ if (isset($_POST['senha_user']) && isset($_POST['Csenha_user'])) {
     echo "As senhas não correspondem!";
   }
 }
+
 ?>
 
 		                            	</div>
@@ -152,14 +140,14 @@ if (isset($_POST['senha_user']) && isset($_POST['Csenha_user'])) {
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">CEP</label>
-													<input type="text" id="cep" class="form-control" name="cep" class="input" >
+													<input type="text" id="cep" class="form-control" name="cep" class="input"  value= <?php echo $bd_arr['cep'] ?> >
 		                                    	</div>
 		                                	</div>
 		                                	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 													<label class="control-label">Estado</label>
-		                                        	<select class="form-control" id="uf" name="uf">
-														<option disabled="" selected=""></option>
+														<option disabled="" selected="" ></option>
+		                                        	<select class="form-control" id="uf" name="uf" value= <?php echo $bd_arr['uf'] ?> >
 														<option value="AC">Acre</option>
 														<option value="AL">Alagoas</option>
 														<option value="AP">Amapá</option>
@@ -193,26 +181,26 @@ if (isset($_POST['senha_user']) && isset($_POST['Csenha_user'])) {
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Cidade</label>
-													<input type="text" id="cidade" class="form-control" name="cidade" class="input"    >
+													<input type="text" id="cidade" class="form-control" name="cidade" class="input"  value= <?php echo $bd_arr['cidade'] ?>   >
 		                                    	</div>
 		                                	</div>
 		                              	<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Bairro</label>
-													<input type="text" id="bairro" class="form-control" name="bairro" class="input">
+													<input type="text" id="bairro" class="form-control" name="bairro" class="input" value= <?php echo $bd_arr['bairro'] ?> >
 													
 		                                    	</div>
 		                                	</div>
 											<div class="col-lg-4 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Endereço </label>
-													<input type="text" id="endereco" class="form-control" name="endereco" class="input" >
+													<input type="text" id="endereco" class="form-control" name="endereco" class="input" value= <?php echo $bd_arr['endereco'] ?>>
 		                                    	</div>
 		                                	</div>
 											<div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Número </label>
-													<input type="number" id="numero" class="form-control" name="numero" class="input" >
+													<input type="number" id="numero" class="form-control" name="numero" class="input" value= <?php echo $bd_arr['numero'] ?> >
 		                                    	</div>
 		                                	</div>
 									

@@ -86,7 +86,7 @@ body {
   border-color: rgb(216, 216, 216);
 }
 .cabecalho{
-  background-color: rgba(128, 62, 0, 0.582);
+  background-color: #f44336;
   border-radius: 10px 10px 0px 0px ;
   margin: -24px;
   padding: 30px;
