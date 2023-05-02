@@ -285,6 +285,16 @@ if (isset($_POST['senha_user']) && isset($_POST['Csenha_user'])) {
 		                                            </div>
 		                                        </div>
 		                                    </div>
+											<div class="col-lg-10 col-sm-offset-1">
+											<div class="form-group label-floating">
+												<label class="control-label"> <b>Nos fale sobre você </label>
+												<textarea rows="8" cols="8" class="form-control"
+													name="descricao"></textarea>
+											</div>
+										</div>
+										
+									
+								</div>
 		                                </div>
 		                            </div>		
 		                  

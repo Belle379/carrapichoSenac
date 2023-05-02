@@ -40,11 +40,12 @@ $fone_user = $_POST["fone_user"];
 $email_user = $_POST["email_user"];
 $senha_user = md5($_POST["senha_user"]);
 $tpuser = $_POST ["tpuser"];
+$descricao = $_POST["descricao"];
 
 //$query_algumacoisa é uma variavel para inserir o camando do banco.
 //dbuser = dados basicos user 
-$query_dbuser = "INSERT INTO tb_user ( CPF_user, nome_user,fone_user,email_user,senha_user,tpuser) 
-VALUES ('$CPF_user', '$nome_user','$fone_user','$email_user','$senha_user','$tpuser')";
+$query_dbuser = "INSERT INTO tb_user ( CPF_user, nome_user,fone_user,email_user,senha_user,tpuser, descricao) 
+VALUES ('$CPF_user', '$nome_user','$fone_user','$email_user','$senha_user','$tpuser','$descricao')";
 //$result_algumacoisa é outra variavel para conectar direcionar qual é o banco e qual é a tabela. 
 $result_dbuser = mysqli_query($conexao, $query_dbuser);
 
