@@ -87,9 +87,10 @@ $colunas = mysqli_fetch_array($resultado);
     <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
       <!--fim config carroseul-->
       <!--card-->
-      <?php        
-      if ($colunas) {
-        do {
+      <?php    
+         if  ($resultado && mysqli_num_rows($resultado) > 0) {
+ 
+      while ($colunas = mysqli_fetch_array($resultado)) {
           ?>
      
           <td>
@@ -107,23 +108,21 @@ $colunas = mysqli_fetch_array($resultado);
                       </h6>
                       <h5>
                         <?php echo  $colunas['tpuser'] .  "</h5>";
-                       echo "<td> <hr>";
+                       echo "<td> <hr>";?>
                       
-                        if ($colunas['tpuser'] =="cuidador"){
-                          echo "<h5>Serviços: </h5> ";
-                          echo $colunas['petSitter'] == 1 ? "<h6> Pet Sitter</h6>" : "" . "" ; 
-                          echo $colunas['hospedeiro']== 1 ? "<h6>Hospedeiro</h6>" : ""  . ""; 
-                          echo $colunas['passeador']== 1 ? "<h6>Passeador</h6>" : "" ; 
-                        } elseif ($colunas['tpuser'] =="veterinario"){
-                          echo $colunas['vacina'] == 1 ? "<h6> Aplico vacinas</h6>" : "" . "<p>";
-                          echo $colunas['exame']== 1 ? "<h6>Faço exames</h6>" : "" . "<p>";
-                          echo $colunas['consulta']== 1 ? "<h6>Faço consulta</h6>" : "" . "<p>"; 
-                          echo $colunas['emergencia']== 1 ? "<h6>Atendo emergencias</h6>" : "" . "<p>"; 
-                         } else{
-                          echo "Adestrador.";
-                         }
-                    
-                  ?>
+                        <?php if ($colunas['tpuser'] =="cuidador"){?>
+                        <h5>Serviços: </h5> 
+                        <?php echo $colunas['petSitter'] == 1 ? "<h6> Pet Sitter</h6>" : "" . "" ; ?>
+                        <?php  echo $colunas['hospedeiro']== 1 ? "<h6>Hospedeiro</h6>" : ""  . ""; ?>
+                        <?php  echo $colunas['passeador']== 1 ? "<h6>Passeador</h6>" : "" ; ?>
+                        <?php } elseif ($colunas['tpuser'] =="veterinario"){ ?>
+                        <?php  echo $colunas['vacina'] == 1 ? "<h6> Aplico vacinas</h6>" : "" . "<p>";?>
+                        <?php  echo $colunas['exame']== 1 ? "<h6>Faço exames</h6>" : "" . "<p>";?>
+                        <?php  echo $colunas['consulta']== 1 ? "<h6>Faço consulta</h6>" : "" . "<p>"; ?>
+                        <?php  echo $colunas['emergencia']== 1 ? "<h6>Atendo emergencias</h6>" : "" . "<p>"; ?>
+                        <?php } else {?>
+                        Adestrador
+                        <?php }   ?>
                       
                       </div>
 
@@ -151,12 +150,10 @@ $colunas = mysqli_fetch_array($resultado);
       </div>
       </div>
       </div>
-    <?php } while ($colunas = mysqli_fetch_array($resultado))
+    <?php } 
         ?>
-    <?php
-        
-      }
-       ?>
+  <?php 
+         } ?>
   <!--fim card-->
 
 
