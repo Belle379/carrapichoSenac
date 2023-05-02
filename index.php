@@ -25,7 +25,7 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/stylleee.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
 </head>
 <body>
    
@@ -78,6 +78,9 @@
                         <input type="password" id="defaultForm-pass" class="form-control validate" name="senha_user">
 
                       </div>
+                      <div class="recuperar">
+                        <a href="resetsenha.php">Esqueci minha senha</a>
+                    </div>
               
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
@@ -445,7 +448,14 @@
             </div>
         </div>
     </div>
- 
+    <footer>
+
+<footer>
+  <div class="containr">
+  
+    <a href="log/logmod.php" class="btn-login">Login Moderador</a>
+  </div>
+</footer>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>

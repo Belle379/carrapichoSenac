@@ -6,17 +6,17 @@ include "conexao.php";
 $email = mysqli_real_escape_string($conexao, trim($_POST['email_user']));
 $senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha_user'])));
 
-       print_r('Email: ' . $email);
+       /*print_r('Email: ' . $email);
        print_r('<br>');
        print_r('Senha: ' . $senha);
-	   die;
+	   die;*/
 
 $codlogin = "SELECT * FROM tb_user WHERE email_user =  '$email'";
 
 $result = mysqli_query($conexao, $codlogin);
 $row = mysqli_num_rows($result);
 
-if($row > 0){
+if($email == ['moderador@carrapicho.com'] && $senha == ['carra123']){
 	
 	$bd_arr = mysqli_fetch_array($result);
 	
@@ -35,22 +35,7 @@ if($row > 0){
 	
 	}else{
 		echo "Por favor verificar senha !";
-	
 	}
-	if ($email === 'moderador@carrapicho.com' && $senha ==='carra123'){
-	
-			header("Location: /./carrapichoSenac/moderador.php");
-			exit();
-		
-			//var_dump($row);
-			//die;		
-		
-		}else{
-			echo "Por favor verificar senha !";
-		}
-	
-
-	
 
 }else{
 	echo "Não foi encontrado nenhum cadastro para esse E-mail!";
