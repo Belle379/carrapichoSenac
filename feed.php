@@ -4,10 +4,11 @@ include "perfilzinho/conexao.php";
 
 
 $apresentar = "SELECT nome_user, fone_user, tpuser, uf, bairro, 
-petSitter, hospedeiro, passeador, vacina, exame, consulta, emergencia, plantao
+petSitter, hospedeiro, passeador, vacina, exame, consulta, emergencia, plantao, descricao
 FROM  tb_user, tb_endereco, tb_servicocuidador, tb_servicovet";
 $resultado = mysqli_query($conexao, $apresentar);
 $colunas = mysqli_fetch_array($resultado);
+
 ?>
 
 <!DOCTYPE html>
